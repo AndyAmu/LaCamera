@@ -1,0 +1,115 @@
+---
+import { siteData } from "../config/siteData";
+import ContactForm from "./ContactForm.astro";
+import Icons from "./Icons.astro";
+---
+
+<section class="relative bg-gradient-to-b from-cream-100/70 via-cream-50 to-cream-50 pt-8 pb-14 sm:pt-12 sm:pb-20 overflow-hidden border-b border-cream-200/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
+      
+      <!-- Left Column: Content, CTA Buttons & Hero Legal Image -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <!-- Trust badge / Stars -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-cream-300 shadow-sm">
+          <div class="flex text-amber-500">
+            {Array.from({ length: 5 }).map(() => (
+              <Icons name="star" class="w-4 h-4 text-amber-500 fill-amber-500" />
+            ))}
+          </div>
+          <span class="text-xs sm:text-sm font-semibold text-navy-950 reviews-display-dynamic">
+            ★ <span class="reviews-rating-val">{siteData.reviews.rating}</span> · <span class="reviews-count-dynamic">{siteData.reviews.count}</span> reseñas en Google
+          </span>
+        </div>
+
+        <!-- Strict H1 Semantic Antetítulo -->
+        <h1 class="text-xs sm:text-sm font-bold tracking-wider text-navy-800 uppercase font-sans">
+          {siteData.hero.eyebrow}
+        </h1>
+
+        <!-- Large Display Visual Title (<p> tag as mandated) -->
+        <p class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-950 font-serif leading-tight sm:leading-tight">
+          {siteData.hero.title}
+        </p>
+
+        <!-- Bajada -->
+        <p class="text-base sm:text-lg text-slate-700 leading-relaxed max-w-2xl">
+          {siteData.hero.subtitle}
+        </p>
+
+        <!-- Zona Notice -->
+        <div class="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-600">
+          <Icons name="mapPin" class="w-4 h-4 text-navy-700 flex-shrink-0" />
+          <span>{siteData.hero.zoneNotice}</span>
+        </div>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3.5 pt-2">
+          <!-- Botón principal WhatsApp -->
+          <a
+            href={siteData.whatsapp.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="track-whatsapp inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl font-bold text-base text-white bg-[#16A34A] hover:bg-[#15803D] active:scale-[0.99] transition-all shadow-md hover:shadow-lg"
+            data-location="hero"
+          >
+            <Icons name="whatsapp" class="w-5 h-5 text-white" />
+            <span>Escribinos por WhatsApp</span>
+          </a>
+
+          <!-- Botón secundario: Solo visible en celular (lg:hidden) -->
+          <a
+            href={siteData.phone.href}
+            class="track-call lg:hidden inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-base text-navy-900 bg-white hover:bg-cream-100 border border-slate-300 transition-all shadow-sm"
+            data-location="hero-mobile"
+          >
+            <Icons name="phone" class="w-5 h-5 text-navy-800" />
+            <span>Llamar ahora</span>
+          </a>
+        </div>
+
+        <!-- Imagen Principal en el Hero con Píldora/Badge Flotante Sólido -->
+        <div class="pt-4 sm:pt-6">
+          <div class="relative rounded-2xl overflow-hidden shadow-card border border-cream-200/90 aspect-[16/10] sm:aspect-[16/9] w-full max-w-2xl bg-cream-100 group">
+            <picture>
+              <source srcset={siteData.images.hero} type="image/webp" />
+              <img
+                src={siteData.images.hero}
+                alt="Abogada conversando con una persona que tuvo un accidente de tránsito"
+                width="1000"
+                height="625"
+                fetchpriority="high"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                decoding="async"
+                onerror={`this.onerror=null;this.src='${siteData.images.heroFallback}'`}
+              />
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F1E36]/80 via-transparent to-transparent pointer-events-none"></div>
+
+            <!-- Píldora/Badge Flotante Sólido en la esquina inferior -->
+            <div class="absolute bottom-3 left-3 right-3 sm:right-auto z-10 bg-[#0F1E36]/95 backdrop-blur-sm text-white px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-lg shadow-lg border border-white/15 flex items-center gap-2.5 sm:gap-3">
+              <div class="p-1 sm:p-1.5 rounded-md bg-amber-500/20 text-amber-400 shrink-0">
+                <Icons name="shield" class="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" />
+              </div>
+              <p class="text-[11px] sm:text-xs font-semibold text-slate-100 leading-snug">
+                Estudio Jurídico en San Isidro · Especialistas en Accidentes de Tránsito (CABA y GBA Zona Norte)
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Desktop Contact Form -->
+      <div class="hidden lg:block lg:col-span-5 sticky top-28">
+        <ContactForm
+          formOrigin="hero"
+          title="Contanos qué pasó"
+          subtitle="La consulta es sin cargo. Te respondemos a la brevedad."
+        />
+      </div>
+
+    </div>
+  </div>
+</section>

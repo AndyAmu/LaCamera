@@ -1,0 +1,110 @@
+---
+import { siteData } from "../config/siteData";
+import Icons from "./Icons.astro";
+---
+
+<section id="visitanos" class="py-16 sm:py-24 bg-white scroll-mt-20 border-t border-cream-200/80">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+      
+      <!-- Left Column: Content & Coffee Photo -->
+      <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+        <div class="space-y-4">
+          <span class="text-xs font-bold tracking-wider text-amber-800 uppercase font-sans">
+            Encuentro personal
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-950 font-serif leading-tight">
+            Vení a tomar un café
+          </h2>
+          <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+            Nos gusta conocer a las personas que confían en nosotros. Agendá una reunión en el estudio, contanos tu caso con tranquilidad y te explicamos cómo podemos ayudarte. El café corre por nuestra cuenta. Si el estudio te queda lejos, hacemos la consulta por WhatsApp o por teléfono. Las reuniones son solo con turno previo.
+          </p>
+
+          <!-- Location Details Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+            <div class="p-4 rounded-xl bg-cream-50 border border-cream-200/80 flex items-start gap-3">
+              <div class="p-2 rounded-lg bg-navy-100 text-navy-900 flex-shrink-0">
+                <Icons name="mapPin" class="w-5 h-5" />
+              </div>
+              <div>
+                <span class="text-xs font-bold text-navy-900 uppercase tracking-wider block">Dirección</span>
+                <p class="text-sm font-medium text-slate-800 mt-0.5">
+                  {siteData.address.short}
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-cream-50 border border-cream-200/80 flex items-start gap-3">
+              <div class="p-2 rounded-lg bg-navy-100 text-navy-900 flex-shrink-0">
+                <Icons name="clock" class="w-5 h-5" />
+              </div>
+              <div>
+                <span class="text-xs font-bold text-navy-900 uppercase tracking-wider block">Horario</span>
+                <p class="text-sm font-medium text-slate-800 mt-0.5">
+                  {siteData.hours}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <a
+              href={siteData.whatsapp.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="track-whatsapp inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-[#16A34A] hover:bg-[#15803D] transition-all shadow-md hover:shadow-lg"
+              data-location="visitanos"
+            >
+              <Icons name="whatsapp" class="w-5 h-5 text-white" />
+              <span>Coordinar una reunión</span>
+            </a>
+
+            <a
+              href={siteData.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="track-maps inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base text-navy-900 bg-cream-100 hover:bg-cream-200 border border-cream-300 transition-all"
+            >
+              <Icons name="mapPin" class="w-5 h-5 text-navy-800" />
+              <span>Cómo llegar</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Proportioned Coffee Image with Controlled Height -->
+        <div class="pt-2">
+          <picture>
+            <source srcset={siteData.images.coffee} type="image/webp" />
+            <img
+              src={siteData.images.coffee}
+              alt="Taza de café sobre un escritorio"
+              width="800"
+              height="300"
+              loading="lazy"
+              decoding="async"
+              class="h-56 sm:h-64 w-full object-cover rounded-2xl shadow-md border border-cream-200/90"
+              onerror={`this.onerror=null;this.src='${siteData.images.coffeeFallback}'`}
+            />
+          </picture>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Interactive Embedded Google Maps -->
+      <div class="lg:col-span-6 min-h-[420px] rounded-2xl overflow-hidden border border-cream-200/90 shadow-card bg-cream-100 relative">
+        <iframe
+          title="Ubicación de Estudio La Cámera en San Isidro"
+          src="https://www.google.com/maps?q=Martin+y+Omar+129,+San+Isidro,+Buenos+Aires&output=embed"
+          width="100%"
+          height="100%"
+          class="w-full h-full min-h-[420px] border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Mapa de Google mostrando la ubicación del estudio en San Isidro"
+        ></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>

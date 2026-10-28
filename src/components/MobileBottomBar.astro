@@ -1,0 +1,81 @@
+---
+import { siteData } from "../config/siteData";
+import Icons from "./Icons.astro";
+---
+
+<div
+  id="mobile-bottom-bar"
+  class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 shadow-card transition-all duration-300 ease-in-out transform translate-y-0 opacity-100"
+  role="region"
+  aria-label="Acciones rápidas de contacto"
+>
+  <div class="flex items-center gap-2 max-w-md mx-auto">
+    <!-- WhatsApp Button (50%) -->
+    <a
+      href={siteData.whatsapp.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="track-whatsapp flex-1 inline-flex items-center justify-center gap-2 py-3 px-2 rounded-xl font-bold text-sm text-white bg-whatsapp hover:bg-whatsapp-hover active:scale-[0.98] transition-all shadow-sm"
+      data-location="bottom-bar-mobile"
+    >
+      <Icons name="whatsapp" class="w-5 h-5 text-white flex-shrink-0" />
+      <span>WhatsApp</span>
+    </a>
+
+    <!-- Llamar Button (50%) -->
+    <a
+      href={siteData.phone.href}
+      class="track-call flex-1 inline-flex items-center justify-center gap-2 py-3 px-2 rounded-xl font-semibold text-sm text-navy-950 bg-cream-100 hover:bg-cream-200 active:scale-[0.98] border border-cream-300 transition-all shadow-sm"
+      data-location="bottom-bar-mobile"
+    >
+      <Icons name="phone" class="w-5 h-5 text-navy-800 flex-shrink-0" />
+      <span>Llamar</span>
+    </a>
+  </div>
+</div>
+
+<script>
+  function setupMobileBar() {
+    const bar = document.getElementById("mobile-bottom-bar");
+    if (!bar) return;
+
+    // Listen to form focus changes dispatched by ContactForm.astro
+    window.addEventListener("form-focus-change", ((e: CustomEvent) => {
+      const isFocused = e.detail?.focused;
+      if (isFocused) {
+        bar.classList.add("translate-y-full", "opacity-0", "pointer-events-none");
+        bar.classList.remove("translate-y-0", "opacity-100");
+      } else {
+        bar.classList.remove("translate-y-full", "opacity-0", "pointer-events-none");
+        bar.classList.add("translate-y-0", "opacity-100");
+      }
+    }) as EventListener);
+
+    // Hide also when contact section is in viewport view to avoid overlapping
+    const contactSection = document.getElementById("contacto");
+    if (contactSection && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            // When user reaches deep into contact form on mobile
+            if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
+              bar.classList.add("translate-y-full", "opacity-0", "pointer-events-none");
+              bar.classList.remove("translate-y-0", "opacity-100");
+            } else if (!entry.isIntersecting) {
+              bar.classList.remove("translate-y-full", "opacity-0", "pointer-events-none");
+              bar.classList.add("translate-y-0", "opacity-100");
+            }
+          });
+        },
+        { threshold: [0, 0.4, 0.8] }
+      );
+      observer.observe(contactSection);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupMobileBar);
+  } else {
+    setupMobileBar();
+  }
+</script>

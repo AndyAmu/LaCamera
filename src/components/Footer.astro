@@ -1,0 +1,117 @@
+---
+import { siteData } from "../config/siteData";
+import Icons from "./Icons.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-navy-950 text-slate-300 pt-16 pb-28 lg:pb-16 border-t border-navy-900" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-navy-900">
+      
+      <!-- Brand & Description Column -->
+      <div class="lg:col-span-5 space-y-4">
+        <a href="/" class="inline-block" aria-label="Estudio La Cámera - Inicio">
+          <img
+            src={siteData.images.logo}
+            alt={siteData.logo.alt}
+            width="230"
+            height="44"
+            class="h-10 w-auto object-contain opacity-95"
+            loading="lazy"
+            decoding="async"
+            onerror={`this.onerror=null;this.src='${siteData.images.logoFallback}'`}
+          />
+        </a>
+        <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+          {siteData.officialDefinition}
+        </p>
+        <div class="pt-2">
+          <a
+            href="#resenas"
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-900 text-xs font-medium text-cream-100 hover:text-white hover:bg-navy-800 transition-colors border border-navy-800"
+          >
+            <span class="text-amber-400">★ <span class="reviews-rating-val">{siteData.reviews.rating}</span></span>
+            <span><span class="reviews-count-dynamic">{siteData.reviews.count}</span> reseñas en Google</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Navigation Column -->
+      <div class="lg:col-span-3 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-cream-200 block">
+          Navegación
+        </span>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="#como-trabajamos" class="hover:text-cream-100 transition-colors">Cómo trabajamos</a>
+          </li>
+          <li>
+            <a href="#casos" class="hover:text-cream-100 transition-colors">Qué casos tomamos</a>
+          </li>
+          <li>
+            <a href="#resenas" class="hover:text-cream-100 transition-colors">Reseñas de clientes</a>
+          </li>
+          <li>
+            <a href="#que-hacer" class="hover:text-cream-100 transition-colors">Qué hacer tras un accidente</a>
+          </li>
+          <li>
+            <a href="#preguntas-frecuentes" class="hover:text-cream-100 transition-colors">Preguntas frecuentes</a>
+          </li>
+          <li>
+            <a href="#visitanos" class="hover:text-cream-100 transition-colors">Vení a tomar un café</a>
+          </li>
+          <li>
+            <a href="#contacto" class="hover:text-cream-100 transition-colors">Contacto</a>
+          </li>
+          <li>
+            <a href="/politica-de-privacidad" class="text-amber-400 hover:text-amber-300 transition-colors font-medium">Política de privacidad</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info Column -->
+      <div class="lg:col-span-4 space-y-3 text-sm">
+        <span class="text-xs font-bold uppercase tracking-wider text-cream-200 block">
+          Contacto y Ubicación
+        </span>
+        <div class="space-y-3 text-slate-400">
+          <div class="flex items-start gap-2.5">
+            <Icons name="mapPin" class="w-4 h-4 text-cream-200 flex-shrink-0 mt-0.5" />
+            <span>{siteData.address.full}</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <Icons name="phone" class="w-4 h-4 text-cream-200 flex-shrink-0" />
+            <a href={siteData.phone.href} class="hover:text-white transition-colors">{siteData.phone.display}</a>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <Icons name="whatsapp" class="w-4 h-4 text-whatsapp flex-shrink-0" />
+            <a href={siteData.whatsapp.url} target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">{siteData.whatsapp.international}</a>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <Icons name="mail" class="w-4 h-4 text-cream-200 flex-shrink-0" />
+            <a href={`mailto:${siteData.email}`} class="hover:text-white transition-colors">{siteData.email}</a>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <Icons name="clock" class="w-4 h-4 text-cream-200 flex-shrink-0" />
+            <span>{siteData.hours} (Solo con turno previo)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Legal Notice & Copyright -->
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <p class="text-center md:text-left">
+        {siteData.faqCategories ? "La información de este sitio es orientativa y no reemplaza el asesoramiento profesional sobre cada caso." : ""}
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center md:text-right">
+        <span>© {currentYear} Estudio La Cámera. Todos los derechos reservados.</span>
+        <span class="text-slate-600 hidden sm:inline">·</span>
+        <span class="text-slate-400">Desarrollado por Sur Soluciones</span>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,141 @@
+---
+---
+
+<div
+  id="cookie-banner"
+  class="hidden fixed bottom-16 lg:bottom-4 inset-x-4 max-w-5xl mx-auto z-50 bg-[#0F1E36] text-white border border-slate-700 rounded-xl shadow-2xl p-4 sm:px-6 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300"
+  role="dialog"
+  aria-live="polite"
+  aria-label="Aviso de cookies y consentimiento"
+>
+  <div class="text-sm text-slate-200 leading-relaxed">
+    Usamos cookies para entender cómo se usa el sitio y mejorarlo. Podés aceptarlas o rechazarlas.
+    <a
+      href="/politica-de-privacidad"
+      class="underline text-amber-300 hover:text-amber-200 ml-1"
+    >
+      Más información
+    </a>
+  </div>
+
+  <div class="flex items-center gap-3 shrink-0 w-full sm:w-auto">
+    <button
+      type="button"
+      id="cookie-reject"
+      class="flex-1 sm:flex-none px-4 py-2 rounded-lg border border-slate-500 text-slate-200 hover:bg-slate-800 text-sm font-medium transition text-center"
+    >
+      Rechazar
+    </button>
+    <button
+      type="button"
+      id="cookie-accept"
+      class="flex-1 sm:flex-none px-5 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-bold transition text-center"
+    >
+      Aceptar
+    </button>
+  </div>
+</div>
+
+<script>
+  // Cookie Consent & Analytics Loader
+  function initCookieConsent() {
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("cookie-accept");
+    const rejectBtn = document.getElementById("cookie-reject");
+
+    const CONSENT_KEY = "elc_cookie_consent";
+    const consent = localStorage.getItem(CONSENT_KEY);
+
+    // If user already decided
+    if (consent === "accepted") {
+      loadAnalytics();
+    } else if (consent === "rejected") {
+      // do not load
+    } else {
+      // First visit: show banner with short delay
+      setTimeout(() => {
+        banner?.classList.remove("hidden");
+      }, 700);
+    }
+
+    acceptBtn?.addEventListener("click", () => {
+      localStorage.setItem(CONSENT_KEY, "accepted");
+      banner?.classList.add("hidden");
+      loadAnalytics();
+    });
+
+    rejectBtn?.addEventListener("click", () => {
+      localStorage.setItem(CONSENT_KEY, "rejected");
+      banner?.classList.add("hidden");
+    });
+
+    // Helper: Load GA4 dynamically only when accepted
+    function loadAnalytics() {
+      if ((window as any).__gaLoaded) return;
+      (window as any).__gaLoaded = true;
+
+      // Google Analytics 4 ID placeholder (can be configured via environment or siteData)
+      const GA_MEASUREMENT_ID = (window as any).__GA_ID || "G-ESTUDIOLACAMERA";
+
+      // Initialize gtag function safely
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
+      }
+      (window as any).gtag = gtag;
+
+      gtag("js", new Date());
+      gtag("config", GA_MEASUREMENT_ID, {
+        anonymize_ip: true,
+        cookie_flags: "SameSite=None;Secure",
+      });
+
+      // Load GA script asynchronously
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+      document.head.appendChild(script);
+
+      // Track conversions
+      setupConversionsTracking();
+    }
+
+    // Set up click conversions for WhatsApp and Calls
+    function setupConversionsTracking() {
+      // 1. WhatsApp Clicks
+      document.querySelectorAll(".track-whatsapp").forEach((el) => {
+        el.addEventListener("click", () => {
+          const location = el.getAttribute("data-location") || "general";
+          if (typeof (window as any).gtag === "function") {
+            (window as any).gtag("event", "click_whatsapp", {
+              event_category: "conversion",
+              event_label: location,
+            });
+          }
+        });
+      });
+
+      // 2. Call Clicks
+      document.querySelectorAll(".track-call, a[href^='tel:']").forEach((el) => {
+        el.addEventListener("click", () => {
+          const location = el.getAttribute("data-location") || "general";
+          if (typeof (window as any).gtag === "function") {
+            (window as any).gtag("event", "click_call", {
+              event_category: "conversion",
+              event_label: location,
+            });
+          }
+        });
+      });
+    }
+
+    // Always setup click listeners so if user clicks, we can record or buffer
+    setupConversionsTracking();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCookieConsent);
+  } else {
+    initCookieConsent();
+  }
+</script>

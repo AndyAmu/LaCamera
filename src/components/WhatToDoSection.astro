@@ -1,0 +1,73 @@
+---
+import { siteData } from "../config/siteData";
+import Icons from "./Icons.astro";
+---
+
+<section id="que-hacer" class="py-16 sm:py-24 bg-white scroll-mt-20 border-t border-cream-200/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-12 sm:mb-16">
+      <span class="text-xs font-bold tracking-wider text-amber-800 uppercase font-sans">
+        Guía práctica
+      </span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-950 font-serif mt-1 mb-3">
+        Qué hacer después de un accidente
+      </h2>
+      <p class="text-base sm:text-lg text-slate-700">
+        Lo que hagas en las primeras horas puede marcar la diferencia en tu reclamo. Seguí estos pasos.
+      </p>
+    </div>
+
+    <!-- 6 Steps Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {siteData.whatToDoSteps.map((step) => (
+        <div class="flex items-start gap-4 p-6 sm:p-7 rounded-2xl bg-cream-50/70 border border-cream-200/90 shadow-soft">
+          <div class="p-3 rounded-xl bg-navy-900 text-cream-100 flex-shrink-0 shadow-sm">
+            <Icons name={step.icon} class="w-6 h-6" />
+          </div>
+          <div class="space-y-1.5">
+            <span class="text-xs font-bold text-amber-700 uppercase tracking-wider">
+              Paso {step.step}
+            </span>
+            <h3 class="text-lg font-bold text-navy-950 font-serif">
+              {step.title}
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              {step.text}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Aviso de prescripción destacado -->
+    <div class="mt-10 sm:mt-12 p-6 sm:p-8 rounded-2xl bg-amber-50 border-2 border-amber-300 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-start sm:items-center gap-4">
+        <div class="p-3 rounded-xl bg-amber-200/80 text-amber-900 flex-shrink-0">
+          <Icons name="clock" class="w-7 h-7" />
+        </div>
+        <div>
+          <span class="text-xs font-bold text-amber-900 uppercase tracking-wider block mb-0.5">
+            Plazo legal de prescripción
+          </span>
+          <p class="text-base sm:text-lg font-bold text-navy-950 leading-snug">
+            Tenés 3 años desde el accidente para reclamar. Pasado ese plazo, perdés el derecho. No lo dejes para después.
+          </p>
+        </div>
+      </div>
+
+      <a
+        href={siteData.whatsapp.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="track-whatsapp flex-shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-whatsapp hover:bg-whatsapp-hover transition-all shadow-md hover:shadow-lg w-full md:w-auto"
+        data-location="que-hacer-aviso"
+      >
+        <Icons name="whatsapp" class="w-5 h-5 text-white" />
+        <span>Tuve un accidente, necesito ayuda</span>
+      </a>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,105 @@
+---
+import { siteData } from "../config/siteData";
+import ContactForm from "./ContactForm.astro";
+import Icons from "./Icons.astro";
+---
+
+<section id="contacto" class="py-16 sm:py-24 bg-cream-50 scroll-mt-20 border-t border-cream-200/80">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      
+      <!-- Left Column: Information & Direct Channels -->
+      <div class="lg:col-span-6 space-y-8">
+        <div>
+          <span class="text-xs font-bold tracking-wider text-amber-800 uppercase font-sans">
+            Contacto directo
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-950 font-serif mt-1 mb-3">
+            ¿Tuviste un accidente? Hablemos
+          </h2>
+          <p class="text-base sm:text-lg text-slate-700 leading-relaxed">
+            Estés en San Isidro, Vicente López, San Martín, San Miguel, José C. Paz, Moreno o CABA, contanos qué pasó y te decimos sin cargo si tenés reclamo. Elegí la forma que te quede más cómoda.
+          </p>
+        </div>
+
+        <!-- Direct Contact Channels -->
+        <div class="space-y-4">
+          <!-- WhatsApp Channel Card -->
+          <a
+            href={siteData.whatsapp.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="track-whatsapp flex items-center justify-between p-5 rounded-2xl bg-white border border-cream-200/90 shadow-soft hover:shadow-card hover:border-whatsapp/60 transition-all group"
+            data-location="contacto-final"
+          >
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-xl bg-whatsapp/10 text-whatsapp-dark group-hover:bg-whatsapp group-hover:text-white transition-colors">
+                <Icons name="whatsapp" class="w-6 h-6" />
+              </div>
+              <div>
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Respuesta inmediata</span>
+                <span class="text-base font-bold text-navy-950 group-hover:text-whatsapp-dark transition-colors">
+                  Escribinos por WhatsApp
+                </span>
+                <p class="text-xs text-slate-600 mt-0.5">{siteData.whatsapp.international}</p>
+              </div>
+            </div>
+            <Icons name="chevronRight" class="w-5 h-5 text-slate-400 group-hover:text-whatsapp-dark transition-transform group-hover:translate-x-1" />
+          </a>
+
+          <!-- Call Channel Card -->
+          <a
+            href={siteData.phone.href}
+            class="track-call flex items-center justify-between p-5 rounded-2xl bg-white border border-cream-200/90 shadow-soft hover:shadow-card hover:border-navy-800/60 transition-all group"
+            data-location="contacto-final"
+          >
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-xl bg-navy-100 text-navy-900 group-hover:bg-navy-900 group-hover:text-white transition-colors">
+                <Icons name="phone" class="w-6 h-6" />
+              </div>
+              <div>
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Llamada telefónica</span>
+                <span class="text-base font-bold text-navy-950 group-hover:text-navy-800 transition-colors">
+                  Llamar al {siteData.phone.display}
+                </span>
+                <p class="text-xs text-slate-600 mt-0.5">Lunes a viernes de 8 a 16 h</p>
+              </div>
+            </div>
+            <Icons name="chevronRight" class="w-5 h-5 text-slate-400 group-hover:text-navy-900 transition-transform group-hover:translate-x-1" />
+          </a>
+
+          <!-- Email Channel Card -->
+          <a
+            href={`mailto:${siteData.email}`}
+            class="flex items-center justify-between p-5 rounded-2xl bg-white border border-cream-200/90 shadow-soft hover:shadow-card hover:border-navy-800/60 transition-all group"
+          >
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-xl bg-cream-100 text-navy-900 group-hover:bg-navy-900 group-hover:text-white transition-colors">
+                <Icons name="mail" class="w-6 h-6" />
+              </div>
+              <div>
+                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Correo electrónico</span>
+                <span class="text-base font-bold text-navy-950 group-hover:text-navy-800 transition-colors">
+                  {siteData.email}
+                </span>
+                <p class="text-xs text-slate-600 mt-0.5">Respondemos en el día</p>
+              </div>
+            </div>
+            <Icons name="chevronRight" class="w-5 h-5 text-slate-400 group-hover:text-navy-900 transition-transform group-hover:translate-x-1" />
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Reusable Contact Form -->
+      <div class="lg:col-span-6">
+        <ContactForm
+          formOrigin="contacto_final"
+          title="Envianos tu consulta"
+          subtitle="Completá el formulario y un abogado especialista evaluará tu caso sin cargo."
+        />
+      </div>
+
+    </div>
+  </div>
+</section>

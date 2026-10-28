@@ -1,0 +1,174 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { siteData } from "../config/siteData";
+---
+
+<Layout
+  title="Política de privacidad | Estudio La Cámera"
+  description="Cómo Estudio La Cámera protege los datos de las personas que hacen una consulta."
+>
+  <div class="py-16 sm:py-24 bg-cream-50 min-h-[70vh]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb -->
+      <nav class="mb-8" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-xs sm:text-sm text-slate-500">
+          <li>
+            <a href="/" class="hover:text-navy-900 transition-colors">Inicio</a>
+          </li>
+          <li>
+            <span class="text-slate-300">/</span>
+          </li>
+          <li class="text-navy-900 font-semibold" aria-current="page">
+            Política de privacidad
+          </li>
+        </ol>
+      </nav>
+
+      <article class="bg-white rounded-3xl p-8 sm:p-14 shadow-card border border-cream-200/90 text-slate-700 space-y-8">
+        
+        <!-- Header -->
+        <header class="border-b border-cream-200 pb-8">
+          <span class="text-xs font-bold tracking-wider text-amber-800 uppercase font-sans">
+            Marco Legal Ley 25.326
+          </span>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-navy-950 font-serif mt-2 mb-3">
+            Política de privacidad
+          </h1>
+          <p class="text-sm text-slate-500">
+            Última actualización: octubre de 2026
+          </p>
+        </header>
+
+        <!-- Section: Quién es responsable -->
+        <section class="space-y-3">
+          <h2 class="text-xl font-bold text-navy-950 font-serif">
+            Quién es responsable de tus datos
+          </h2>
+          <p class="text-base leading-relaxed">
+            El responsable de los datos personales que se recolectan en este sitio es Estudio La Cámera, con domicilio en Martín y Omar 129, Piso 2, Of. 211, B1642DHC San Isidro, Provincia de Buenos Aires. Contacto: <a href={`mailto:${siteData.email}`} class="text-navy-800 font-semibold underline">{siteData.email}</a>.
+          </p>
+        </section>
+
+        <!-- Section: Qué datos recolectamos -->
+        <section class="space-y-3">
+          <h2 class="text-xl font-bold text-navy-950 font-serif">
+            Qué datos recolectamos
+          </h2>
+          <p class="text-base leading-relaxed">
+            Cuando completás el formulario de contacto, recolectamos tu nombre y apellido, tu teléfono, tu email (si lo cargás), el tipo de accidente, si hubo lesionados y lo que nos cuentes sobre lo que pasó. También registramos datos de navegación anónimos, como la página desde la que llegaste, mediante cookies (ver información de cookies al final de esta página).
+          </p>
+        </section>
+
+        <!-- Section: Para qué los usamos -->
+        <section class="space-y-3">
+          <h2 class="text-xl font-bold text-navy-950 font-serif">
+            Para qué los usamos
+          </h2>
+          <p class="text-base leading-relaxed">
+            Usamos tus datos solo para responder tu consulta, evaluar tu caso y contactarte. No los usamos para enviarte publicidad ni los compartimos, vendemos o cedemos a terceros, salvo obligación legal.
+          </p>
+        </section>
+
+        <!-- Section: Confidencialidad -->
+        <section class="space-y-3">
+          <h2 class="text-xl font-bold text-navy-950 font-serif">
+            Confidencialidad
+          </h2>
+          <p class="text-base leading-relaxed">
+            Toda la información que nos compartís está protegida por el secreto profesional que rige la actividad de los abogados.
+          </p>
+        </section>
+
+        <!-- Section: Cuánto tiempo los guardamos -->
+        <section class="space-y-3">
+          <h2 class="text-xl font-bold text-navy-950 font-serif">
+            Cuánto tiempo los guardamos
+          </h2>
+          <p class="text-base leading-relaxed">
+            Guardamos tus datos solo mientras sean necesarios para atender tu consulta. Cuando dejan de ser necesarios, los eliminamos. Si nos encargás el caso, los conservamos durante el tiempo que exijan las obligaciones legales y profesionales del estudio.
+          </p>
+        </section>
+
+        <!-- Section: Tus derechos -->
+        <section class="space-y-4">
+          <h2 class="text-xl font-bold text-navy-950 font-serif">
+            Tus derechos
+          </h2>
+          <p class="text-base leading-relaxed">
+            Podés pedir acceder a tus datos, corregirlos, actualizarlos o eliminarlos escribiendo a <a href={`mailto:${siteData.email}`} class="text-navy-800 font-semibold underline">{siteData.email}</a>. Te respondemos dentro de los plazos que establece la ley.
+          </p>
+          <div class="p-5 rounded-2xl bg-cream-50 border border-cream-200 text-sm space-y-3 text-slate-600">
+            <p>
+              El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley Nº 25.326.
+            </p>
+            <p>
+              La Agencia de Acceso a la Información Pública, en su carácter de Órgano de Control de la Ley Nº 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section: Cambios en esta política -->
+        <section class="space-y-3">
+          <h2 class="text-xl font-bold text-navy-950 font-serif">
+            Cambios en esta política
+          </h2>
+          <p class="text-base leading-relaxed">
+            Podemos actualizar esta política. La fecha de la última actualización figura al principio de esta página.
+          </p>
+        </section>
+
+        <!-- Section: Cookies que usa el sitio -->
+        <section class="space-y-4 pt-6 border-t border-cream-200">
+          <h2 class="text-xl font-bold text-navy-950 font-serif">
+            Aviso y tabla informativa de cookies
+          </h2>
+          <p class="text-sm leading-relaxed text-slate-600">
+            El sitio utiliza las siguientes cookies para garantizar su funcionamiento, la medición estadística y la integración de servicios:
+          </p>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm border-collapse rounded-xl overflow-hidden border border-cream-200">
+              <thead class="bg-navy-900 text-white text-xs uppercase font-sans tracking-wider">
+                <tr>
+                  <th scope="col" class="py-3 px-4 font-semibold">Tipo</th>
+                  <th scope="col" class="py-3 px-4 font-semibold">Para qué</th>
+                  <th scope="col" class="py-3 px-4 font-semibold">Proveedor</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-cream-200 bg-cream-50/50">
+                <tr>
+                  <td class="py-3 px-4 font-semibold text-navy-950">Necesarias</td>
+                  <td class="py-3 px-4">Que el sitio y el formulario funcionen y recordar la elección de cookies</td>
+                  <td class="py-3 px-4 font-medium text-slate-700">Propias</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-semibold text-navy-950">Medición</td>
+                  <td class="py-3 px-4">Contar visitas y consultas, y saber desde dónde llegan</td>
+                  <td class="py-3 px-4 font-medium text-slate-700">Google Analytics</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-semibold text-navy-950">Contenido de terceros</td>
+                  <td class="py-3 px-4">Mostrar el mapa y las reseñas</td>
+                  <td class="py-3 px-4 font-medium text-slate-700">Google Maps y Google</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Back to Home -->
+        <div class="pt-8 border-t border-cream-200 text-center sm:text-left">
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 font-semibold text-navy-800 hover:text-navy-950 underline"
+          >
+            &larr; Volver a la página principal
+          </a>
+        </div>
+
+      </article>
+
+    </div>
+  </div>
+</Layout>

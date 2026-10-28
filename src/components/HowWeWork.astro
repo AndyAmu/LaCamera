@@ -1,0 +1,76 @@
+---
+import { siteData } from "../config/siteData";
+import Icons from "./Icons.astro";
+---
+
+<section id="como-trabajamos" class="py-16 sm:py-24 bg-cream-50 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mb-12 sm:mb-16">
+      <span class="text-xs font-bold tracking-wider text-amber-800 uppercase font-sans">
+        Paso a paso
+      </span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-950 font-serif mt-1 mb-3">
+        Cómo trabajamos
+      </h2>
+      <p class="text-base sm:text-lg text-slate-700">
+        Un reclamo tiene pasos claros. Te explicamos cada uno para que sepas qué va a pasar y cuándo.
+      </p>
+    </div>
+
+    <!-- 4 Steps Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative">
+      {siteData.howWeWork.map((step) => (
+        <div class="relative flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-white border border-cream-200/90 shadow-soft hover:shadow-card transition-all">
+          <div>
+            <!-- Header with Step Number & Icon -->
+            <div class="flex items-center justify-between mb-5">
+              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-cream-100 text-navy-950 font-bold text-sm">
+                {step.step}
+              </span>
+              <div class="p-2.5 rounded-xl bg-navy-50 text-navy-800">
+                <Icons name={step.icon} class="w-6 h-6" />
+              </div>
+            </div>
+
+            <!-- Timeframe Badge -->
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200/60 mb-2.5">
+              <Icons name="clock" class="w-3.5 h-3.5" />
+              <span>{step.timeframe}</span>
+            </div>
+
+            <!-- Step Title (<h3>) -->
+            <h3 class="text-lg sm:text-xl font-bold text-navy-950 mb-3 font-serif">
+              {step.title}
+            </h3>
+
+            <!-- Step Text -->
+            <p class="text-sm text-slate-600 leading-relaxed">
+              {step.text}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Footnote & CTA -->
+    <div class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 pt-6 border-t border-cream-200/80">
+      <p class="text-xs sm:text-sm text-slate-500 italic text-center sm:text-left">
+        Los plazos son orientativos y dependen de cada caso.
+      </p>
+
+      <a
+        href={siteData.whatsapp.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="track-whatsapp inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-whatsapp hover:bg-whatsapp-hover transition-all shadow-md hover:shadow-lg w-full sm:w-auto"
+        data-location="como-trabajamos"
+      >
+        <Icons name="whatsapp" class="w-5 h-5 text-white" />
+        <span>Hacé tu consulta sin cargo</span>
+      </a>
+    </div>
+
+  </div>
+</section>

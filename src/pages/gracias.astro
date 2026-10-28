@@ -1,0 +1,137 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { siteData } from "../config/siteData";
+import Icons from "../components/Icons.astro";
+---
+
+<Layout
+  title="Consulta recibida | Estudio La Cámera"
+  description="Confirmación de recepción de tu consulta sobre accidente de tránsito."
+  robots="noindex, nofollow"
+>
+  <div class="py-16 sm:py-24 bg-cream-50 min-h-[75vh] flex items-center">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-card border border-cream-200/90 text-center">
+        
+        <!-- Success Icon -->
+        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-green-50 text-green-600 flex items-center justify-center mx-auto mb-6 shadow-sm border border-green-200">
+          <Icons name="check" class="w-10 h-10" />
+        </div>
+
+        <!-- Dynamic Title -->
+        <h1 id="gracias-title" class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-950 font-serif mb-4 leading-tight">
+          ¡Gracias! Recibimos tu consulta
+        </h1>
+
+        <!-- Main text with telephone feedback -->
+        <div class="space-y-3 text-slate-700 text-base sm:text-lg mb-8 leading-relaxed">
+          <p id="gracias-mensaje-telefono">
+            Un abogado del estudio la va a revisar y te va a llamar a la brevedad.
+          </p>
+          <p class="text-sm sm:text-base text-slate-600">
+            ¿Está mal el número?{" "}
+            <a
+              href={siteData.whatsapp.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="track-whatsapp text-whatsapp-dark font-semibold hover:underline inline-flex items-center gap-1"
+              data-location="gracias-fix-number"
+            >
+              <span>Escribinos por WhatsApp</span>
+              <Icons name="whatsapp" class="w-4 h-4 inline" />
+            </a>
+          </p>
+          <p class="text-xs sm:text-sm text-slate-500 font-medium pt-1">
+            La consulta es sin cargo y sin compromiso.
+          </p>
+        </div>
+
+        <!-- Bloque urgente -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-cream-50/80 border border-cream-200 mb-8 text-left sm:text-center space-y-3">
+          <h2 class="text-base font-bold text-navy-950 flex items-center sm:justify-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+            <span>¿Tu caso es urgente?</span>
+          </h2>
+          <p class="text-sm text-slate-600">
+            Si necesitás respuesta inmediata o acabás de tener el accidente:
+          </p>
+          <div>
+            <a
+              href={siteData.whatsapp.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="track-whatsapp inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-white bg-whatsapp hover:bg-whatsapp-hover transition-all shadow-md hover:shadow"
+              data-location="gracias-urgente"
+            >
+              <Icons name="whatsapp" class="w-4 h-4 text-white" />
+              <span>Escribinos ahora por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bloque "mientras tanto" -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-amber-50/70 border border-amber-200 text-left mb-8 space-y-2">
+          <div class="flex items-center gap-2 text-xs font-bold text-amber-900 uppercase tracking-wider">
+            <Icons name="clock" class="w-4 h-4" />
+            <span>Recomendación clave mientras esperás</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Guardá fotos, datos del otro conductor y comprobantes de gastos, y <strong>no firmes nada ni aceptes ofertas del seguro</strong> sin asesorarte.
+          </p>
+        </div>
+
+        <!-- Secondary links -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 border-t border-cream-200/80 text-sm">
+          <a
+            href="/#que-hacer"
+            class="font-semibold text-navy-800 hover:text-navy-950 underline hover:no-underline"
+          >
+            Ver qué hacer después de un accidente
+          </a>
+          <span class="text-slate-300 hidden sm:inline">·</span>
+          <a
+            href="/"
+            class="font-medium text-slate-600 hover:text-slate-900"
+          >
+            Volver al inicio
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  function hydrateGraciasPage() {
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get("nombre")?.trim();
+    const telefono = params.get("telefono")?.trim();
+
+    const titleEl = document.getElementById("gracias-title");
+    const telMsgEl = document.getElementById("gracias-mensaje-telefono");
+
+    if (nombre && titleEl) {
+      // Sanitize text content to prevent XSS
+      titleEl.textContent = `¡Gracias, ${nombre}! Recibimos tu consulta`;
+    }
+
+    if (telefono && telMsgEl) {
+      telMsgEl.textContent = `Un abogado del estudio la va a revisar y te va a llamar al ${telefono} a la brevedad.`;
+    }
+
+    // Trigger conversion event for Google Analytics 4
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "form_submit", {
+        event_category: "conversion",
+        event_label: "pagina_gracias",
+      });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", hydrateGraciasPage);
+  } else {
+    hydrateGraciasPage();
+  }
+</script>

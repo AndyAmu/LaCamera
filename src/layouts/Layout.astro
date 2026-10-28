@@ -1,0 +1,231 @@
+---
+import { siteData } from "../config/siteData";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import MobileBottomBar from "../components/MobileBottomBar.astro";
+import DesktopFloatingButton from "../components/DesktopFloatingButton.astro";
+import CookieBanner from "../components/CookieBanner.astro";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  robots?: string;
+  isHome?: boolean;
+}
+
+const {
+  title = siteData.meta.title,
+  description = siteData.meta.description,
+  ogTitle = siteData.meta.ogTitle,
+  ogDescription = siteData.meta.ogDescription,
+  ogImage = siteData.meta.ogImage,
+  robots = "index, follow",
+  isHome = false,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, siteData.domain).href;
+const fullOgImageUrl = new URL(ogImage, siteData.domain).href;
+
+// Build Schema JSON-LD Graph for Home
+const schemaGraph = isHome
+  ? {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LegalService",
+          "@id": `${siteData.domain}/#organization`,
+          name: siteData.name,
+          description: siteData.officialDefinition,
+          url: siteData.domain,
+          logo: `${siteData.domain}${siteData.logo.url}`,
+          image: fullOgImageUrl,
+          telephone: siteData.phone.raw,
+          email: siteData.email,
+          hasMap: siteData.googleMapsUrl,
+          priceRange: "Honorarios a resultado",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: siteData.address.streetAddress,
+            addressLocality: siteData.address.city,
+            addressRegion: siteData.address.state,
+            postalCode: siteData.address.postalCode,
+            addressCountry: siteData.address.country,
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              opens: "08:00",
+              closes: "16:00",
+            },
+          ],
+          areaServed: siteData.zones.map((zone) => ({
+            "@type": "AdministrativeArea",
+            name: zone,
+          })),
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5.0",
+            reviewCount: "293",
+            bestRating: "5",
+            worstRating: "1",
+          },
+        },
+        {
+          "@type": "FAQPage",
+          "@id": `${siteData.domain}/#faqpage`,
+          mainEntity: siteData.faqCategories.flatMap((cat) =>
+            cat.items.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.paragraphs.join(" "),
+              },
+            }))
+          ),
+        },
+      ],
+    }
+  : null;
+---
+
+<!doctype html>
+<html lang="es-AR" class="scroll-smooth">
+  <head>
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MCZ5GRKC');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href={siteData.logo.url} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={fullOgImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content={siteData.name} />
+    <meta property="og:locale" content="es_AR" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={fullOgImageUrl} />
+
+    <!-- Preconnect / DNS-prefetch -->
+    <link rel="preconnect" href="https://maps.google.com" />
+    <link rel="dns-prefetch" href="https://maps.google.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    {schemaGraph && (
+      <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+    )}
+  </head>
+  <body class="bg-cream-50 text-slate-800 antialiased font-sans">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCZ5GRKC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <Header />
+    <main id="main-content" class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+    
+    <MobileBottomBar />
+    <DesktopFloatingButton />
+    <CookieBanner />
+
+    <!-- Script de Sincronización en Tiempo Real de Reseñas de Google -->
+    <script is:inline>
+      (function() {
+        var CACHE_KEY = "elc_reviews_data";
+
+        function updateDOM(count, rating) {
+          if (!count) return;
+          var countStr = String(count);
+          document.querySelectorAll(".reviews-count-dynamic").forEach(function(el) {
+            el.textContent = countStr;
+          });
+          if (rating) {
+            var ratingStr = String(rating).replace(".", ",");
+            document.querySelectorAll(".reviews-rating-val").forEach(function(el) {
+              el.textContent = ratingStr;
+            });
+          }
+        }
+
+        // 1. Mostrar de inmediato valor de localStorage si existe
+        try {
+          var cached = localStorage.getItem(CACHE_KEY);
+          if (cached) {
+            var parsed = JSON.parse(cached);
+            if (parsed && parsed.count) {
+              updateDOM(parsed.count, parsed.rating);
+            }
+          }
+        } catch (_) {}
+
+        // 2. Determinar endpoint (en localhost consulta directamente al JSON para evitar problemas de PHP en Node)
+        var isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+        var endpoint = isLocal
+          ? "/api/data/reviews-cache.json?_t=" + Date.now()
+          : "/api/reviews.php?_t=" + Date.now();
+
+        fetch(endpoint)
+          .then(function(res) {
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            return res.json();
+          })
+          .then(function(data) {
+            if (data && (data.count || data.rating)) {
+              updateDOM(data.count, data.rating);
+              try {
+                localStorage.setItem(
+                  CACHE_KEY,
+                  JSON.stringify({ count: data.count, rating: data.rating, timestamp: Date.now() })
+                );
+              } catch (_) {}
+            }
+          })
+          .catch(function() {
+            // Si /api/reviews.php falla en producción, intentar leer reviews-cache.json
+            if (!isLocal) {
+              fetch("/api/data/reviews-cache.json?_t=" + Date.now())
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                  if (data && data.count) {
+                    updateDOM(data.count, data.rating);
+                  }
+                })
+                .catch(function() {});
+            }
+          });
+      })();
+    </script>
+  </body>
+</html>
