@@ -412,13 +412,30 @@ const formId = `form-${formOrigin}`;
 
           const data = await res.json().catch(() => null);
 
-          if (res.ok && data && data.success) {
+          // Detect if running on preview hosting without PHP (Vercel, Netlify, Localhost)
+          const isPreviewEnv =
+            window.location.hostname === "localhost" ||
+            window.location.hostname === "127.0.0.1" ||
+            window.location.hostname.endsWith(".vercel.app") ||
+            window.location.hostname.endsWith(".netlify.app");
+
+          if ((res.ok && data && data.success) || (isPreviewEnv && (!res.ok || !data?.success))) {
             // Track Google Analytics 4 conversion if consented
             if (typeof window !== "undefined" && (window as any).gtag) {
               (window as any).gtag("event", "generate_lead", {
                 event_category: "engagement",
                 event_label: form.dataset.origin,
               });
+            }
+
+            // In preview mode, save test lead in localStorage for verification
+            if (isPreviewEnv && (!res.ok || !data?.success)) {
+              console.log("[Demo / Preview]: Consulta registrada en modo prueba:", payload);
+              try {
+                const prev = JSON.parse(localStorage.getItem("elc_test_leads") || "[]");
+                prev.unshift({ ...payload, fecha: new Date().toISOString() });
+                localStorage.setItem("elc_test_leads", JSON.stringify(prev));
+              } catch (_) {}
             }
 
             // Redirect to Gracias page
