@@ -1,0 +1,755 @@
+﻿Contenidos del sitio web — Estudio La Cámera
+CONTENIDOS DEL SITIO WEB — ESTUDIO LA CÁMERA
+Cliente: Estudio La Cámera
+Fecha: 26 de octubre de 2026 · Actualizado: 2 de noviembre de 2026
+Destinatario: Desarrollador web
+Elaborado por: Sur Soluciones
+Cambios de esta versión (2 de noviembre de 2026)
+Todo lo nuevo o modificado está resaltado en amarillo. Al pasarlo al sitio, el texto va sin resaltar.
+* 1 · Ficha del estudio: se agregan matrícula, trayectoria e Instagram.
+* 2.4 · Cómo trabajamos: nueva bajada y nota al pie; pasos 3 y 4 reescritos (mediación y juicio) y nuevos plazos de los pasos 2 y 3.
+* 2.8 · Preguntas frecuentes: nuevas respuestas de las preguntas 2, 3 y 5.
+* 2.11 · Footer: se agregan matrícula e Instagram.
+* 6.6 y 6.7 · Datos para buscadores y resumen para IA: se agrega Instagram.
+* 8.3 · Íconos: se agrega el ícono de Instagram y se reemplazan los de cheque.
+* Cobro por transferencia: se reemplaza el cheque por transferencia bancaria en 2.2, 2.3, 2.4, FAQ 12 y 14, 6.1, 6.2 y 6.7.
+	1. DATOS GENERALES DEL SITIO
+Estos datos se repiten en varias secciones y tienen que ser idénticos en todo el sitio y en la ficha de Google Business.
+Ficha del estudio
+Dato
+	Valor
+	Nombre
+	Estudio La Cámera
+	Especialidad
+	Accidentes de tránsito
+	Dominio
+	estudiolacamera.com.ar
+	Dirección
+	Martín y Omar 129, Piso 2, Of. 211, B1642DHC San Isidro, Provincia de Buenos Aires
+	Horario de atención
+	Lunes a viernes de 8 a 16 h
+	Reuniones en el estudio
+	Solo con turno previo
+	Ficha de Google Business
+	https://maps.app.goo.gl/beQFR5Lyw3yD5Mih9
+	Matrícula
+	T° 118 F° 930 CPACF - T° 47 F° 59 CASI
+	Trayectoria
+	20 años
+	Instagram
+	https://www.instagram.com/estudiolacamera/
+	Teléfono y WhatsApp
+Todos los botones de WhatsApp del sitio usan el mismo número y el mismo mensaje precargado. Todos los números visibles inician la llamada con un toque.
+Dato
+	Valor
+	Número visible
+	11 5879-4246
+	Número en formato internacional
+	+54 9 11 5879-4246
+	Mensaje precargado de WhatsApp
+	Hola, tuve un accidente de tránsito y quiero hacer una consulta.
+	Email
+info@estudiolacamera.com.ar. Se muestra en el sitio y recibe las consultas del formulario.
+Reseñas de Google
+Dato
+	Valor
+	Calificación
+	5,0
+	Cantidad de reseñas
+	293 (el contador se actualiza solo)
+	Formato en el sitio
+	★ 5,0 · 293 reseñas en Google
+	Zonas
+Denominación general: CABA y GBA Zona Norte. Localidades que se nombran: San Miguel, José C. Paz, CABA, San Isidro, Vicente López, San Martín y Moreno.
+Frase de definición del estudio
+Se usa siempre igual en el footer (2.11), los datos para buscadores (6.6) y el resumen para motores de IA (6.7):
+"Estudio La Cámera es un estudio jurídico de San Isidro especializado exclusivamente en accidentes de tránsito en CABA y GBA Zona Norte."
+Logo
+Se toma de la web actual: https://estudiolacamera.com.ar/gui/img/logo-light.png. Texto alternativo: "Estudio La Cámera – Abogados especialistas en accidentes de tránsito".
+2. HOME: CONTENIDO SECCIÓN POR SECCIÓN
+La home tiene 11 secciones, en este orden. Los textos están en voseo y en tono cercano. Todos los botones de WhatsApp usan el número y el mensaje del punto 1, y todos los botones "Llamar" llaman al 11 5879-4246.
+2.1 Header fijo
+Queda visible arriba durante toda la navegación.
+Elemento
+	Contenido
+	Logo
+	Logo del estudio, lleva al inicio de la página
+	Calificación
+	★ 5,0 · 293 reseñas en Google (lleva a la sección Reseñas)
+	Menú
+	Cómo trabajamos · Casos · Reseñas · Preguntas frecuentes · Contacto
+	Botón
+	Escribinos por WhatsApp
+	Cada ítem del menú lleva a su sección. En celular, el menú se abre desde un ícono y el botón de WhatsApp lo reemplaza la barra fija inferior (2.12).
+2.2 Hero
+Es la primera pantalla. En computadora lleva el formulario de contacto al costado; en celular el formulario no va acá, sino en Contacto final (2.10).
+Elemento
+	Contenido
+	Antetítulo
+	Abogados especialistas en accidentes de tránsito en CABA y GBA (es el título principal H1, ver 6.3)
+	Título destacado (se ve grande, no es el H1)
+	Tuviste un accidente. Nosotros nos ocupamos del reclamo.
+	Bajada
+	Te asesoramos sin cargo y te acompañamos desde el primer día hasta que cobrás. Cobramos solo si vos cobrás, y la indemnización te llega por transferencia a tu cuenta bancaria.
+	Calificación
+	★ 5,0 · 293 reseñas en Google
+	Zona
+	Atendemos en CABA y GBA Zona Norte.
+	Botón principal
+	Escribinos por WhatsApp
+	Botón secundario (solo celular)
+	Llamar ahora
+	Imagen
+	Foto cálida y real: una persona conversando con un abogado (foto de banco). Sin imágenes impactantes (detalle en el punto 8)
+	Formulario del hero (solo computadora)
+Elemento
+	Contenido
+	Título
+	Contanos qué pasó
+	Bajada
+	La consulta es sin cargo. Te respondemos a la brevedad.
+	Campos y botón
+	Los del punto 3
+	2.3 Barra de confianza
+Va debajo del hero: cuatro datos, cada uno con un ícono lineal, un título corto y una línea de apoyo.
+Dato
+	Título
+	Línea de apoyo
+	1
+	★ 5,0 en Google
+	293 personas nos calificaron (el número se actualiza con el contador de reseñas)
+	2
+	Consulta sin cargo
+	Te decimos si tenés reclamo, sin compromiso
+	3
+	Honorarios a resultado
+	Cobramos solo si vos cobrás
+	4
+	Cobrás directo en tu cuenta
+	La indemnización te llega por transferencia bancaria, directamente a tu cuenta
+	2.4 Cómo trabajamos
+Elemento
+	Contenido
+	Título
+	Cómo trabajamos
+	Bajada
+	Un reclamo tiene pasos claros. Te explicamos cada uno para que sepas qué va a pasar en cada etapa.
+	Botón
+	Hacé tu consulta sin cargo (WhatsApp)
+	Nota al pie
+	Los plazos son orientativos. No nos comprometemos con fechas porque dependen de factores que no controla el estudio, como los tiempos de la aseguradora, de la mediación y de los juzgados. Lo que sí te aseguramos es que te mantenemos al tanto de cada avance.
+	La nota al pie va bien visible debajo de los pasos, no en letra chica. La última frase va en negrita.
+Los 4 pasos:
+Paso
+	Título
+	Texto
+	Plazo orientativo
+	1
+	Consulta sin cargo
+	Nos contás qué pasó por WhatsApp, por teléfono o en una reunión en el estudio, con turno previo. Analizamos tu caso y te decimos si tenés reclamo y cómo seguir.
+	En el día
+	2
+	Armamos tu caso
+	Reunimos la documentación, evaluamos tus lesiones con nuestro médico legista y los daños del vehículo con nuestros peritos y talleres.
+	1 semana
+	3
+	Mediación y juicio
+	Vamos a la mediación, que es obligatoria en Provincia de Buenos Aires y en CABA, y negociamos por vos con la aseguradora. Después de la mediación iniciamos el juicio, porque es la mejor forma de defender tu reclamo y obtener un mejor resultado.
+	4 semanas
+	4
+	Cobrás
+	Durante el juicio seguimos negociando por vos. Cuando se cierra un acuerdo o hay sentencia, cobrás con una transferencia a tu cuenta bancaria.
+	Al cierre del acuerdo o la sentencia
+	2.5 Qué casos tomamos
+Elemento
+	Contenido
+	Título
+	Qué casos tomamos
+	Bajada
+	Si tuviste un accidente de tránsito, es probable que tengas derecho a reclamar. Estos son los casos que atendemos todos los días en CABA y GBA Zona Norte.
+	Botón de cada tarjeta
+	Consultar por mi caso (WhatsApp)
+	Son 6 tarjetas. Cada una muestra el título y el resumen, y al expandirse muestra el texto completo. El texto completo tiene que estar en la página desde que carga, aunque la tarjeta esté cerrada.
+Tarjeta 1 — Accidentes con autos
+Resumen: Choques entre autos, como conductor o como acompañante.
+Texto completo: Si chocaste con tu auto o ibas de acompañante, podés reclamar los daños del vehículo, tus lesiones, los gastos médicos y los días sin trabajar. Como acompañante, el reclamo puede dirigirse a los dos conductores y sus aseguradoras. Nos ocupamos de todo el trámite con el seguro y te mantenemos al tanto de cada paso.
+Tarjeta 2 — Peatones
+Resumen: Si te atropelló un vehículo mientras caminabas.
+Texto completo: Como peatón, sos la parte más expuesta de un accidente y la ley te da una protección especial. Podés reclamar al conductor y a su aseguradora por tus lesiones, tratamientos, gastos y daño psicológico. Aunque hayas cruzado fuera de la senda peatonal, puede haber reclamo: lo evaluamos en la consulta sin cargo.
+Tarjeta 3 — Motos y bicicletas
+Resumen: Accidentes en moto, bicicleta o monopatín.
+Texto completo: En moto o en bici, las lesiones suelen ser más graves y los tratamientos más largos. Por eso es clave documentar bien el daño desde el principio. Nuestro médico legista evalúa tus lesiones y nuestros peritos, los daños del vehículo, para que el reclamo refleje todo lo que perdiste.
+Tarjeta 4 — Transporte público
+Resumen: Colectivos, trenes, subte, taxis y autos de aplicación.
+Texto completo: Si te lastimaste viajando en colectivo, tren, subte, taxi o auto de aplicación, en CABA o en el conurbano, la empresa de transporte tiene la obligación de llevarte sano y salvo a destino. Una frenada brusca, una caída al subir o bajar o un choque pueden dar lugar a un reclamo. Guardá el boleto, el comprobante de la tarjeta SUBE o el registro del viaje.
+Tarjeta 5 — Reclamos a aseguradoras
+Resumen: Cuando el seguro rechaza el siniestro o te ofrece poco.
+Texto completo: Muchas veces la aseguradora rechaza el siniestro, demora la respuesta o hace una primera oferta baja. Antes de aceptar o firmar cualquier recibo, consultanos. Revisamos tu póliza, calculamos lo que te corresponde y negociamos por vos.
+Tarjeta 6 — Reclamos a particulares
+Resumen: Cuando el responsable no tiene seguro o no responde.
+Texto completo: Si el otro conductor no tenía seguro, tenía la póliza vencida o directamente no responde, igual podés reclamar. En esos casos el reclamo se dirige al responsable y, si corresponde, al titular del vehículo. Te explicamos las opciones y el camino más conveniente para tu caso.
+2.6 Reseñas
+Elemento
+	Contenido
+	Título
+	Lo que dicen quienes ya pasaron por esto
+	Contador
+	★ 5,0 · 293 reseñas en Google (se actualiza solo)
+	Carrusel
+	Entre 6 y 10 reseñas reales de Google. Cada una muestra nombre, estrellas, fecha y texto
+	Botón
+	Ver todas las reseñas en Google (lleva a la ficha de Google Business)
+	Las reseñas las selecciona Sur Soluciones y van como están en Google, sin editar el texto. Si la integración con Google falla, se cargan a mano.
+#
+	Nombre
+	Fecha
+	Texto
+	1 a 10
+	A seleccionar
+	A seleccionar
+	A seleccionar
+	2.7 Qué hacer tras un accidente
+Elemento
+	Contenido
+	Título
+	Qué hacer después de un accidente
+	Bajada
+	Lo que hagas en las primeras horas puede marcar la diferencia en tu reclamo. Seguí estos pasos.
+	Botón
+	Tuve un accidente, necesito ayuda (WhatsApp)
+	Los 6 pasos:
+Paso
+	Título
+	Texto
+	1
+	Ponete a salvo
+	Si hay heridos, llamá al 911 y esperá la asistencia. Tu salud es lo primero.
+	2
+	Sacá fotos
+	Fotografiá los vehículos, las patentes, los daños, la posición en la calle y los semáforos o carteles cercanos.
+	3
+	Pedí los datos del otro conductor
+	Nombre, DNI, registro, patente, aseguradora y número de póliza.
+	4
+	Buscá testigos
+	Anotá el nombre y el teléfono de quienes vieron el accidente.
+	5
+	Denunciá el siniestro
+	Avisá a tu aseguradora dentro de las 72 horas. Si hubo lesionados, hacé también la denuncia policial.
+	6
+	No firmes nada sin asesorarte
+	No aceptes ofertas ni firmes recibos del seguro antes de consultarnos. La consulta es sin cargo.
+	Aviso de prescripción
+Va destacado debajo de los pasos: "Tenés 3 años desde el accidente para reclamar. Pasado ese plazo, perdés el derecho. No lo dejes para después."
+2.8 Preguntas frecuentes
+Son 20 preguntas en 5 categorías, en el orden en que la persona las necesita.
+Elemento
+	Contenido
+	Título
+	Preguntas frecuentes
+	Bajada
+	Las dudas más comunes de quienes tuvieron un accidente, respondidas por nuestros abogados.
+	Categorías
+	Qué hacer después del accidente · Mi caso · Costos y forma de trabajo · Aseguradoras · Plazos y proceso
+	Preguntas y respuestas
+	Ver abajo
+	Fecha de actualización
+	Última actualización: [fecha]
+	Botón al final
+	¿No encontraste tu respuesta? Escribinos por WhatsApp
+	Aviso legal al final
+	El del punto 5.3
+	Cada pregunta se despliega para mostrar la respuesta, y todas las respuestas tienen que estar en la página desde que carga. Cada pregunta tiene que poder linkearse en forma directa.
+Cada pregunta tiene dos párrafos, que se muestran juntos al desplegarla.
+Categoría 1 — Qué hacer después del accidente
+1. ¿Qué tengo que hacer después de un choque?
+Después de un choque, primero ponete a salvo y, si hay heridos, llamá al 911. Después sacá fotos de los vehículos, las patentes y el lugar, pedí los datos del otro conductor y de su seguro, anotá a los testigos y denunciá el siniestro a tu aseguradora dentro de los 3 días.
+No firmes nada ni aceptes dinero en el lugar. En Estudio La Cámera te guiamos paso a paso desde el primer momento, sin cargo.
+2. ¿En cuánto tiempo tengo que denunciar el accidente al seguro?
+Tenés 3 días corridos desde el accidente para hacer la denuncia ante tu aseguradora, según la Ley de Seguros 17.418. Hacela aunque creas que no tuviste la culpa o que los daños son menores: si no denunciás a tiempo, la aseguradora puede poner trabas a la cobertura. Si estuviste internado o no pudiste hacerla por una causa justificada, el plazo puede extenderse.
+Antes de presentarla, consultala con un abogado: lo que declares queda registrado y después es muy difícil corregirlo. Guardá el comprobante de la denuncia.
+3. ¿Tengo que hacer la denuncia policial?
+Depende del caso. La denuncia policial es necesaria cuando en el accidente hubo personas lesionadas o fallecidas y la policía no la inició por su cuenta. Si solo hubo daños materiales, suele alcanzar con la denuncia ante la aseguradora, aunque conviene dejar constancia escrita de todo lo que pasó.
+Como no siempre conviene hacerla, primero hablalo con un abogado. Si corresponde, se hace en la comisaría de la zona donde ocurrió el accidente. Pedí una copia, porque es una prueba importante para el reclamo.
+4. ¿Tengo que ir al médico aunque no me duela nada?
+Sí. Después de un accidente conviene hacer una consulta médica dentro de las 24 horas, aunque te sientas bien. Algunas lesiones, como las cervicales o las internas, aparecen días después, y el registro médico temprano es una prueba clave para reclamar.
+Guardá todos los informes, estudios, recetas y comprobantes de gastos. En Estudio La Cámera, nuestro médico legista evalúa tus lesiones para incluirlas en el reclamo.
+5. ¿Qué documentación necesito para reclamar?
+Para reclamar por un accidente de tránsito conviene contar con tu DNI, el registro de conducir, la cédula del vehículo, la póliza del seguro, la denuncia del siniestro, fotos de los daños y el presupuesto de reparación. Si hubo lesiones, sumá los informes médicos y los datos de la denuncia policial.
+No siempre hace falta tener todo. Si sos la víctima, podés reclamar aunque no tuvieras el registro o la documentación al día, porque esa falta es administrativa y no le quita responsabilidad a quien te chocó. Si te falta algo, en la consulta sin cargo te decimos qué conseguir y te ayudamos a reunirlo.
+6. ¿Puedo arreglar el auto antes de cobrar?
+Conviene esperar a que la aseguradora inspeccione el vehículo antes de repararlo. Si necesitás usarlo y no podés esperar, sacá fotos detalladas de todos los daños, pedí un presupuesto por escrito y guardá las facturas: así el daño queda probado aunque el auto ya esté arreglado.
+Tenés derecho a elegir el taller, siempre que los costos sean razonables. Con nuestros talleres propios presupuestamos y reparamos tu vehículo.
+Categoría 2 — Mi caso
+7. ¿Qué tipos de accidentes atienden?
+En Estudio La Cámera atendemos exclusivamente accidentes de tránsito: choques entre autos, peatones atropellados, accidentes en moto, bicicleta o monopatín, lesiones en colectivos, trenes, subte, taxis y autos de aplicación, reclamos a aseguradoras y reclamos a particulares sin seguro. Trabajamos en CABA y GBA Zona Norte: San Miguel, José C. Paz, San Isidro, Vicente López, San Martín y Moreno.
+Si tu caso no entra en esta lista, consultanos igual: te decimos sin cargo si tenés reclamo.
+8. ¿Puedo reclamar si iba de acompañante o en colectivo?
+Sí. Si ibas de acompañante, podés reclamar a los conductores involucrados y a sus aseguradoras, sin importar quién tuvo la culpa. Si ibas en colectivo, tren o taxi, la empresa de transporte tiene la obligación de llevarte sano y salvo a destino y responde por tus lesiones.
+Guardá el boleto, el registro de la tarjeta SUBE o el comprobante del viaje en la aplicación, y anotá la línea, el interno o la patente.
+9. ¿Qué pasa si el otro dice que la culpa fue mía o fue compartida?
+Igual podés reclamar. Que el otro conductor te atribuya la culpa en su denuncia no define el caso: la responsabilidad se determina con pruebas, como fotos, testigos y pericias. Si la culpa fue compartida, en general podés cobrar la parte del daño que le corresponde al otro conductor.
+En Estudio La Cámera trabajamos con ingenieros mecánicos que reconstruyen cómo fue el accidente.
+10. ¿Qué hago si el otro no tenía seguro o se dio a la fuga?
+Si el otro conductor no tenía seguro, igual podés reclamarle a él y al titular del vehículo, que responden con su patrimonio. Si se dio a la fuga, hacé la denuncia policial, buscá testigos y cámaras de la zona, y anotá cualquier dato del vehículo, como la patente o el color.
+Según tu póliza, tu propia aseguradora también puede cubrir parte de los daños. Lo revisamos en la consulta.
+11. ¿Qué daños puedo reclamar?
+Después de un accidente de tránsito podés reclamar la reparación integral del daño: los arreglos del vehículo, las lesiones y la incapacidad que te hayan quedado, los gastos médicos y de traslado, los días sin trabajar, el daño psicológico y el daño moral. Cada rubro se calcula según tu caso.
+Para que el reclamo refleje todo, nuestros médicos legistas y psicólogos evalúan las lesiones y las secuelas.
+Categoría 3 — Costos y forma de trabajo
+12. ¿Cuánto cobra un abogado por un accidente de tránsito?
+En Estudio La Cámera trabajamos con honorarios a resultado: no pagás nada por adelantado y cobramos un porcentaje solo si vos cobrás la indemnización. Además, la consulta inicial es sin cargo y la indemnización te llega por transferencia a tu cuenta bancaria.
+El porcentaje se acuerda por escrito desde el inicio, para que sepas exactamente cuánto vas a cobrar.
+13. ¿La consulta tiene costo?
+No. En Estudio La Cámera la consulta es sin cargo y sin compromiso. Nos contás qué pasó por WhatsApp, por teléfono o en una reunión en el estudio con turno previo, analizamos tu caso y te decimos si tenés derecho a reclamar y cómo seguir. Recién después decidís si querés avanzar.
+Si preferís conocernos en persona, te esperamos en el estudio, en San Isidro: el café corre por nuestra cuenta.
+14. ¿Cómo cobro la indemnización?
+En Estudio La Cámera la indemnización se cobra por transferencia bancaria a la cuenta del cliente, no a la del estudio. Así cobrás vos directamente, sabés exactamente cuánto te pagaron y tenés la tranquilidad de que el dinero llega a tu cuenta sin intermediarios.
+Los honorarios del estudio se pagan después, según lo acordado por escrito al inicio.
+15. ¿Dónde está el estudio y en qué zonas atienden?
+Estudio La Cámera está en Martín y Omar 129, Piso 2, Oficina 211, San Isidro, Provincia de Buenos Aires. Atendemos casos de accidentes de tránsito en CABA y GBA Zona Norte: San Miguel, José C. Paz, San Isidro, Vicente López, San Martín y Moreno. También podés hacer tu consulta por WhatsApp o por teléfono.
+Atendemos de lunes a viernes de 8 a 16 h. Las reuniones en el estudio son con turno previo.
+Categoría 4 — Aseguradoras
+16. ¿Conviene aceptar la primera oferta del seguro?
+Antes de aceptar cualquier oferta de la aseguradora, conviene que un abogado la revise. Las primeras ofertas suelen cubrir solo una parte del daño, y al firmar un acuerdo o un recibo en general renunciás a reclamar el resto, aunque después aparezcan nuevas lesiones o gastos.
+En Estudio La Cámera calculamos lo que te corresponde y negociamos por vos con la aseguradora.
+17. ¿Qué hago si la aseguradora rechaza el siniestro o no responde?
+Si la aseguradora rechaza el siniestro, demora la respuesta o no contesta, no tenés que resignarte. El reclamo puede seguir por la vía legal: en Provincia de Buenos Aires y en CABA primero se pasa por una mediación obligatoria y, si no hay acuerdo, se inicia una demanda contra el responsable, citando a su aseguradora.
+Guardá todas las comunicaciones con la aseguradora.
+Categoría 5 — Plazos y proceso
+18. ¿Hasta cuándo puedo reclamar por un accidente de tránsito?
+En Argentina tenés 3 años desde el día del accidente para reclamar los daños al responsable, según el artículo 2561 del Código Civil y Comercial. Pasado ese plazo, el derecho a reclamar prescribe. Por eso conviene consultar cuanto antes, mientras las pruebas están frescas.
+Los reclamos contra tu propia aseguradora pueden tener un plazo distinto.
+19. ¿Cuánto tarda un reclamo por accidente de tránsito?
+Depende de cada caso. Si se llega a un acuerdo con la aseguradora, el reclamo puede resolverse en algunos meses. Si no hay acuerdo y hay que iniciar un juicio, el proceso suele durar alrededor de 3 años, aunque en cualquier etapa se puede cerrar un acuerdo.
+En Estudio La Cámera te mantenemos al tanto de cada paso y te avisamos cada novedad de tu caso.
+20. ¿Es obligatoria la mediación antes de un juicio por accidente de tránsito?
+Sí. En Provincia de Buenos Aires y en la Ciudad de Buenos Aires, antes de iniciar un juicio por un accidente de tránsito hay que pasar por una mediación previa obligatoria. En Provincia la regula la Ley 13.951 y en CABA, la Ley 26.589. Las partes intentan llegar a un acuerdo con un mediador, en un plazo de hasta 60 días.
+El plazo puede prorrogarse si las partes lo acuerdan. En la mediación te representamos y defendemos tu reclamo.
+2.9 Vení a tomar un café
+Elemento
+	Contenido
+	Título
+	Vení a tomar un café
+	Texto
+	Nos gusta conocer a las personas que confían en nosotros. Agendá una reunión en el estudio, contanos tu caso con tranquilidad y te explicamos cómo podemos ayudarte. El café corre por nuestra cuenta. Si el estudio te queda lejos, hacemos la consulta por WhatsApp o por teléfono. Las reuniones son solo con turno previo.
+	Dirección
+	Martín y Omar 129, Piso 2, Of. 211, San Isidro
+	Horario
+	El del punto 1
+	Mapa
+	Mapa de Google con la ubicación del estudio
+	Botón principal
+	Coordinar una reunión (WhatsApp)
+	Botón secundario
+	Cómo llegar (abre Google Maps)
+	Imagen
+	Foto de banco de una taza de café (punto 8)
+	2.10 Contacto final
+Es la última sección antes del footer. En celular es el único lugar donde aparece el formulario.
+Elemento
+	Contenido
+	Título
+	¿Tuviste un accidente? Hablemos
+	Bajada
+	Estés en San Isidro, Vicente López, San Martín, San Miguel, José C. Paz, Moreno o CABA, contanos qué pasó y te decimos sin cargo si tenés reclamo. Elegí la forma que te quede más cómoda.
+	Formulario
+	El del punto 3
+	Botón WhatsApp
+	Escribinos por WhatsApp
+	Botón llamada
+	Llamar al 11 5879-4246
+	Email
+	info@estudiolacamera.com.ar
+	2.11 Footer
+Elemento
+	Contenido
+	Logo
+	Logo del estudio
+	Descripción
+	Estudio La Cámera es un estudio jurídico de San Isidro especializado exclusivamente en accidentes de tránsito en CABA y GBA Zona Norte.
+	Dirección
+	Martín y Omar 129, Piso 2, Of. 211, B1642DHC San Isidro, Provincia de Buenos Aires
+	Teléfono y WhatsApp
+	11 5879-4246
+	Email
+	info@estudiolacamera.com.ar
+	Horario
+	El del punto 1
+	Matrícula
+	T° 118 F° 930 CPACF - T° 47 F° 59 CASI
+	Redes
+	Ícono de Instagram con link a https://www.instagram.com/estudiolacamera/
+	Links
+	Política de privacidad
+	Copyright
+	© [año en curso] Estudio La Cámera. Todos los derechos reservados. El año se actualiza solo
+	Crédito
+	Desarrollado por Sur Soluciones
+	Aviso legal
+	El del punto 5.3
+	2.12 Barra fija en celular y botón flotante en computadora
+Elemento
+	Contenido
+	Barra fija en celular
+	Dos botones del mismo tamaño: "WhatsApp" y "Llamar". Se ve en toda la navegación y se oculta mientras el usuario completa el formulario
+	Botón flotante en computadora
+	Ícono de WhatsApp con el texto "Escribinos"
+	3. FORMULARIO DE CONTACTO
+Es el mismo formulario en el hero (solo computadora) y en Contacto final (2.10). Tiene un solo paso y, al enviarse, lleva a la página de gracias (punto 4).
+Campos
+#
+	Etiqueta
+	Texto de ayuda dentro del campo
+	Tipo
+	Obligatorio
+	Mensaje de error
+	1
+	Nombre y apellido
+	Ej.: Juan Pérez
+	Texto
+	Sí
+	Escribí tu nombre para que sepamos cómo llamarte.
+	2
+	Teléfono
+	Con código de área, sin 0 ni 15. Ej.: 11 1234-5678
+	Teléfono
+	Sí
+	Revisá el número: tiene que tener 10 dígitos con el código de área (ej.: 11 1234-5678).
+	3
+	Email
+	Para enviarte la confirmación de tu consulta. Ej.: juan@gmail.com
+	Email
+	No
+	Revisá el email, parece que falta algo.
+	4
+	Tipo de accidente
+	Elegí una opción
+	Lista desplegable
+	Sí
+	Elegí el tipo de accidente.
+	5
+	¿Hubo lesionados?
+	—
+	Sí / No
+	No
+	—
+	6
+	Contanos qué pasó
+	Cuándo y dónde fue, cómo pasó y si ya hablaste con el seguro
+	Texto largo
+	No
+	—
+	7
+	Casilla de privacidad
+	Ver texto abajo
+	Casilla
+	Sí
+	Para enviar la consulta, aceptá la política de privacidad.
+	Opciones de "Tipo de accidente"
+Mismo orden que las tarjetas de casos (2.5), más la opción "Otro":
+Choque con auto (conductor o acompañante)
+Peatón
+Moto, bicicleta o monopatín
+Transporte público (colectivo, tren, subte, taxi o auto de aplicación)
+Reclamo a una aseguradora
+Reclamo a un particular sin seguro
+Otro
+Textos del formulario
+Elemento
+	Texto
+	Casilla de privacidad
+	Acepto la política de privacidad (link a la página de Política de privacidad)
+	Botón
+	Enviar consulta
+	Botón mientras envía
+	Enviando…
+	Línea debajo del botón
+	Tus datos son confidenciales y solo los usamos para responder tu consulta.
+	Error general de envío
+	No pudimos enviar tu consulta. Probá de nuevo o escribinos por WhatsApp. (con botón de WhatsApp)
+	Mail que recibe el estudio
+Elemento
+	Contenido
+	Destinatario
+	info@estudiolacamera.com.ar
+	Responder a
+	El email del usuario, si lo cargó
+	Asunto
+	Nueva consulta web – [Tipo de accidente] – [Nombre]. Si marcó lesionados: Nueva consulta web – [Tipo de accidente] – CON LESIONADOS – [Nombre]
+	Cuerpo
+	Todos los campos del formulario, fecha y hora, desde qué formulario se envió (hero o contacto final) y el origen de la visita (campaña, buscador, redes o directo)
+	Todas las consultas quedan guardadas también en el sitio, como respaldo.
+Mail de confirmación al usuario
+Se envía solo si el usuario cargó su email.
+Elemento
+	Contenido
+	Remitente
+	Estudio La Cámera
+	Asunto
+	Recibimos tu consulta – Estudio La Cámera
+	Cuerpo:
+Hola, [Nombre]:
+Recibimos tu consulta sobre [tipo de accidente]. Un abogado del estudio la va a revisar y te va a contactar al [teléfono] a la brevedad.
+Si tu caso es urgente, escribinos por WhatsApp al 11 5879-4246 [botón a WhatsApp].
+Mientras tanto, te recomendamos no firmar nada ni aceptar ofertas del seguro sin asesorarte.
+Estudio La Cámera · Martín y Omar 129, Piso 2, Of. 211, San Isidro · 11 5879-4246 · info@estudiolacamera.com.ar
+4. PÁGINA DE GRACIAS
+Se muestra después de enviar el formulario. Usa el mismo header y footer de la home, no aparece en buscadores y registra la conversión del formulario (punto 7).
+Elemento
+	Contenido
+	Título
+	¡Gracias, [Nombre]! Recibimos tu consulta
+	Texto
+	Un abogado del estudio la va a revisar y te va a llamar al [teléfono cargado] a la brevedad. ¿Está mal el número? Escribinos por WhatsApp (con botón). La consulta es sin cargo y sin compromiso.
+	Bloque urgente
+	¿Tu caso es urgente? Escribinos ahora por WhatsApp.
+	Botón urgente
+	Escribinos por WhatsApp
+	Bloque "mientras tanto"
+	Mientras esperás: guardá fotos, datos del otro conductor y comprobantes de gastos, y no firmes nada ni aceptes ofertas del seguro sin asesorarte.
+	Link secundario
+	Ver qué hacer después de un accidente (lleva a la sección 2.7 de la home)
+	Botón para volver
+	Volver al inicio
+	Si la persona llega a esta página sin haber enviado el formulario, el título se muestra sin el nombre: "¡Gracias! Recibimos tu consulta".
+5. TEXTOS LEGALES
+Textos basados en la Ley 25.326 de Protección de Datos Personales.
+5.1 Política de privacidad
+Es una página propia, con el header y el footer de la home, y se linkea desde la casilla del formulario y desde el footer.
+Título: Política de privacidad
+Última actualización: [fecha de publicación]
+Quién es responsable de tus datos
+El responsable de los datos personales que se recolectan en este sitio es Estudio La Cámera, con domicilio en Martín y Omar 129, Piso 2, Of. 211, B1642DHC San Isidro, Provincia de Buenos Aires. Contacto: info@estudiolacamera.com.ar.
+Qué datos recolectamos
+Cuando completás el formulario de contacto, recolectamos tu nombre y apellido, tu teléfono, tu email (si lo cargás), el tipo de accidente, si hubo lesionados y lo que nos cuentes sobre lo que pasó. También registramos datos de navegación anónimos, como la página desde la que llegaste, mediante cookies (ver Aviso de cookies).
+Para qué los usamos
+Usamos tus datos solo para responder tu consulta, evaluar tu caso y contactarte. No los usamos para enviarte publicidad ni los compartimos, vendemos o cedemos a terceros, salvo obligación legal.
+Confidencialidad
+Toda la información que nos compartís está protegida por el secreto profesional que rige la actividad de los abogados.
+Cuánto tiempo los guardamos
+Guardamos tus datos solo mientras sean necesarios para atender tu consulta. Cuando dejan de ser necesarios, los eliminamos. Si nos encargás el caso, los conservamos durante el tiempo que exijan las obligaciones legales y profesionales del estudio.
+Tus derechos
+Podés pedir acceder a tus datos, corregirlos, actualizarlos o eliminarlos escribiendo a info@estudiolacamera.com.ar. Te respondemos dentro de los plazos que establece la ley.
+El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley Nº 25.326.
+La Agencia de Acceso a la Información Pública, en su carácter de Órgano de Control de la Ley Nº 25.326, tiene la atribución de atender las denuncias y reclamos que interpongan quienes resulten afectados en sus derechos por incumplimiento de las normas vigentes en materia de protección de datos personales.
+Cambios en esta política
+Podemos actualizar esta política. La fecha de la última actualización figura al principio de esta página.
+5.2 Aviso de cookies
+Aparece en la primera visita, en la parte inferior de la pantalla, sin tapar los botones de WhatsApp y Llamar. Las cookies de medición se activan solo si la persona acepta.
+Elemento
+	Texto
+	Texto
+	Usamos cookies para entender cómo se usa el sitio y mejorarlo. Podés aceptarlas o rechazarlas.
+	Botón 1
+	Aceptar
+	Botón 2
+	Rechazar
+	Link
+	Más información (lleva a la Política de privacidad)
+	Cookies que usa el sitio, para informar en la política:
+Tipo
+	Para qué
+	Proveedor
+	Necesarias
+	Que el sitio y el formulario funcionen y recordar la elección de cookies
+	Propias
+	Medición
+	Contar visitas y consultas, y saber desde dónde llegan
+	Google Analytics
+	Contenido de terceros
+	Mostrar el mapa y las reseñas
+	Google Maps y Google
+	5.3 Aviso legal de contenidos
+Va en el footer y al final de Preguntas frecuentes:
+"La información de este sitio es orientativa y no reemplaza el asesoramiento profesional sobre cada caso."
+5.4 Copyright
+En el footer: "© [año en curso] Estudio La Cámera. Todos los derechos reservados." El año se actualiza solo.
+6. SEO Y GEO
+Textos y datos que el sitio necesita para aparecer en Google y en las respuestas de los motores de IA.
+6.1 Títulos y descripciones para buscadores
+Página
+	Título
+	Descripción
+	Aparece en Google
+	Home
+	Abogados de accidentes de tránsito en CABA y Gran Buenos Aires Zona Norte | Estudio La Cámera
+	Abogados de accidentes de tránsito en San Miguel, José C. Paz, CABA y San Isidro. Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta.
+	Sí
+	Gracias
+	Consulta recibida | Estudio La Cámera
+	—
+	No
+	Política de privacidad
+	Política de privacidad | Estudio La Cámera
+	Cómo Estudio La Cámera protege los datos de las personas que hacen una consulta.
+	Sí
+	6.2 Textos para compartir en redes y WhatsApp
+Elemento
+	Contenido
+	Título
+	Estudio La Cámera – Abogados de accidentes de tránsito en CABA y Gran Buenos Aires Zona Norte
+	Descripción
+	¿Tuviste un accidente? Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta. ★ 5,0 en Google.
+	Imagen
+	Logo del estudio sobre la foto del hero (punto 8)
+	6.3 Jerarquía de títulos
+Hay un solo título principal (H1) en la página. La frase destacada del hero se ve grande, pero no es el H1.
+Nivel
+	Qué lleva
+	H1
+	Antetítulo del hero: "Abogados especialistas en accidentes de tránsito en CABA y GBA"
+	H2
+	El título de cada sección de la home (2.4 a 2.10)
+	H3
+	Pasos de Cómo trabajamos, tarjetas de casos, pasos de Qué hacer y categorías de las preguntas frecuentes
+	H4
+	Cada pregunta frecuente
+	6.4 Direcciones de las páginas y secciones
+Página o sección
+	Dirección
+	Home
+	estudiolacamera.com.ar
+	Gracias
+	estudiolacamera.com.ar/gracias
+	Política de privacidad
+	estudiolacamera.com.ar/politica-de-privacidad
+	Cómo trabajamos
+	#como-trabajamos
+	Casos
+	#casos
+	Reseñas
+	#resenas
+	Qué hacer tras un accidente
+	#que-hacer
+	Preguntas frecuentes
+	#preguntas-frecuentes
+	Vení a tomar un café
+	#visitanos
+	Contacto
+	#contacto
+	Cada pregunta frecuente
+	# + la pregunta sin signos, ej.: #cuanto-cobra-un-abogado-por-un-accidente-de-transito
+	6.5 Redirecciones
+Las variantes de la home del sitio actual (por ejemplo, /index.html o /index.php) se redirigen a la home nueva.
+6.6 Datos del estudio para buscadores y motores de IA
+Son los datos que el sitio informa a Google y a los motores de IA para identificar al estudio. Tienen que coincidir con lo que se ve en la página.
+Dato
+	Valor
+	Tipo
+	Estudio jurídico (servicio legal)
+	Nombre
+	Estudio La Cámera
+	Descripción
+	La frase de definición del punto 1
+	Dirección, teléfono, email y horario
+	Los del punto 1
+	Ubicación en Google Maps
+	https://maps.app.goo.gl/beQFR5Lyw3yD5Mih9
+	Zona que atiende
+	CABA y GBA Zona Norte: San Miguel, José C. Paz, San Isidro, Vicente López, San Martín y Moreno
+	Servicios
+	Los 6 casos de 2.5
+	Calificación
+	5,0 con la cantidad de reseñas actualizada
+	Logo
+	El del punto 1
+	Perfiles en redes
+	https://www.instagram.com/estudiolacamera/
+	Preguntas frecuentes
+	Las 20 de 2.8, con el mismo texto que se ve en la página
+	6.7 Resumen para motores de IA
+Archivo de texto en la raíz del sitio que les resume el estudio a los motores de IA. Contenido:
+# Estudio La Cámera
+ 
+> Estudio La Cámera es un estudio jurídico de San Isidro especializado exclusivamente en accidentes de tránsito en CABA y GBA Zona Norte.
+ 
+## Datos de contacto
+- Dirección: Martín y Omar 129, Piso 2, Of. 211, B1642DHC San Isidro, Provincia de Buenos Aires
+- Teléfono y WhatsApp: 11 5879-4246
+- Email: info@estudiolacamera.com.ar
+- Horario: lunes a viernes de 8 a 16 h. Reuniones en el estudio con turno previo.
+- Zona: CABA y GBA Zona Norte (San Miguel, José C. Paz, San Isidro, Vicente López, San Martín y Moreno)
+- Instagram: https://www.instagram.com/estudiolacamera/
+ 
+## Casos que atiende
+- Choques entre autos, como conductor o acompañante
+- Peatones atropellados
+- Accidentes en moto, bicicleta o monopatín
+- Lesiones en colectivos, trenes, subte, taxis y autos de aplicación
+- Reclamos a aseguradoras
+- Reclamos a particulares sin seguro
+ 
+## Cómo trabaja
+- Consulta sin cargo
+- Honorarios a resultado
+- La indemnización se cobra por transferencia a la cuenta bancaria del cliente
+ 
+## Calificación
+- 5,0 en Google con [cantidad actualizada] reseñas
+ 
+## Más información
+- Preguntas frecuentes: https://estudiolacamera.com.ar/#preguntas-frecuentes
+- Contacto: https://estudiolacamera.com.ar/#contacto
+ 
+Última actualización: [fecha de publicación]
+7. MEDICIÓN
+El sitio mide en Google Analytics tres conversiones por separado. La medición se activa solo si la persona acepta las cookies (5.2).
+7.1 Conversiones
+Conversión
+	Cuándo se registra
+	Envío de formulario
+	Al llegar a la página de gracias después de enviar el formulario
+	Clic en WhatsApp
+	Al tocar cualquier botón de WhatsApp
+	Clic en Llamar
+	Al tocar cualquier botón o número de teléfono
+	8. IMÁGENES Y MATERIALES
+El desarrollador elige las fotos en bancos de imágenes gratuitos, con estos criterios. La cantidad final, el encuadre y el formato se ajustan al diseño.
+8.1 Criterios para elegir las fotos
+Solo fotos reales, no generadas ni editadas con IA. Conviene elegir fotos de fotógrafos identificados que formen parte de una serie de la misma sesión.
+Licencia gratuita de uso comercial, sin atribución obligatoria.
+Personas con aspecto local, en situaciones cotidianas y tranquilas.
+Luz natural y tonos cálidos, compatibles con la paleta crema del Instagram del estudio.
+Nada de heridos, ambulancias, martillos de juez ni balanzas.
+Ninguna foto de banco se presenta como si fuera del equipo o de la oficina del estudio.
+Se guarda el link de origen de cada foto.
+8.2 Fotos
+#
+	Sección
+	Qué muestra
+	Texto alternativo
+	1
+	Hero (2.2)
+	Una abogada o un abogado conversando con una persona en un escritorio, en un ambiente cálido
+	Abogada conversando con una persona que tuvo un accidente de tránsito
+	2
+	Vení a tomar un café (2.9)
+	Una taza de café sobre un escritorio, sin mostrar un lugar reconocible
+	Taza de café sobre un escritorio
+	3
+	Compartir en redes (6.2)
+	Logo del estudio sobre la foto del hero
+	—
+	La página de gracias y la política de privacidad no llevan fotos.
+8.3 Íconos
+Un solo set de íconos lineales gratuito para todo el sitio, simples y del mismo grosor.
+Sección
+	Íconos
+	Barra de confianza (2.3)
+	Estrella · globo de conversación · apretón de manos · banco o transferencia
+	Cómo trabajamos (2.4)
+	Globo de conversación · carpeta · personas dialogando · billete o transferencia
+	Qué casos tomamos (2.5)
+	Auto · peatón · moto o bicicleta · colectivo · escudo o póliza · persona
+	Qué hacer tras un accidente (2.7)
+	Teléfono de emergencia · cámara de fotos · credencial · personas · campana o aviso · lápiz tachado
+	Aviso de prescripción (2.7)
+	Reloj o calendario
+	Contacto y footer (2.9 a 2.11)
+	WhatsApp · teléfono · email · ubicación · reloj · Instagram
+	8.4 Logo
+Se toma de la web actual: https://estudiolacamera.com.ar/gui/img/logo-light.png.
+
+
+Sur Soluciones · Página

@@ -26,13 +26,27 @@ const currentYear = new Date().getFullYear();
         <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
           {siteData.officialDefinition}
         </p>
-        <div class="pt-2">
+        <p class="text-xs text-slate-400">
+          <span class="text-slate-300 font-medium">Matrícula:</span> {siteData.matricula}
+        </p>
+        <div class="pt-2 flex flex-wrap items-center gap-3">
           <a
             href="#resenas"
             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-navy-900 text-xs font-medium text-cream-100 hover:text-white hover:bg-navy-800 transition-colors border border-navy-800"
           >
             <span class="text-amber-400">★ <span class="reviews-rating-val">{siteData.reviews.rating}</span></span>
             <span><span class="reviews-count-dynamic">{siteData.reviews.count}</span> reseñas en Google</span>
+          </a>
+
+          <a
+            href={siteData.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-navy-900 text-xs font-medium text-cream-100 hover:text-white hover:bg-navy-800 transition-colors border border-navy-800"
+            title="Seguinos en Instagram"
+          >
+            <Icons name="instagram" class="w-3.5 h-3.5 text-amber-400" />
+            <span>Instagram</span>
           </a>
         </div>
       </div>
@@ -104,7 +118,7 @@ const currentYear = new Date().getFullYear();
     <!-- Bottom Legal Notice & Copyright -->
     <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
       <p class="text-center md:text-left">
-        {siteData.faqCategories ? "La información de este sitio es orientativa y no reemplaza el asesoramiento profesional sobre cada caso." : ""}
+        {siteData.legalNotice}
       </p>
 
       <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center md:text-right">

@@ -15,7 +15,7 @@ import Icons from "./Icons.astro";
         Cómo trabajamos
       </h2>
       <p class="text-base sm:text-lg text-slate-700">
-        Un reclamo tiene pasos claros. Te explicamos cada uno para que sepas qué va a pasar y cuándo.
+        Un reclamo tiene pasos claros. Te explicamos cada uno para que sepas qué va a pasar en cada etapa.
       </p>
     </div>
 
@@ -54,17 +54,19 @@ import Icons from "./Icons.astro";
       ))}
     </div>
 
-    <!-- Footnote & CTA -->
-    <div class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-6 pt-6 border-t border-cream-200/80">
-      <p class="text-xs sm:text-sm text-slate-500 italic text-center sm:text-left">
-        Los plazos son orientativos y dependen de cada caso.
-      </p>
+    <!-- Footnote & CTA (Visible Footnote, not fine print, bold last sentence) -->
+    <div class="mt-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 p-6 sm:p-8 rounded-2xl bg-cream-100/70 border border-cream-200/90 shadow-sm">
+      <div class="space-y-1 max-w-3xl">
+        <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
+          Los plazos son orientativos. No nos comprometemos con fechas porque dependen de factores que no controla el estudio, como los tiempos de la aseguradora, de la mediación y de los juzgados. <strong class="text-navy-950 font-semibold">Lo que sí te aseguramos es que te mantenemos al tanto de cada avance.</strong>
+        </p>
+      </div>
 
       <a
         href={siteData.whatsapp.url}
         target="_blank"
         rel="noopener noreferrer"
-        class="track-whatsapp inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-whatsapp hover:bg-whatsapp-hover transition-all shadow-md hover:shadow-lg w-full sm:w-auto"
+        class="track-whatsapp shrink-0 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-whatsapp hover:bg-whatsapp-hover transition-all shadow-md hover:shadow-lg w-full lg:w-auto"
         data-location="como-trabajamos"
       >
         <Icons name="whatsapp" class="w-5 h-5 text-white" />

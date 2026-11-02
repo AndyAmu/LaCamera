@@ -59,6 +59,9 @@ export const siteData = {
   name: "Estudio La Cámera",
   specialty: "Accidentes de tránsito",
   domain: "https://estudiolacamera.com.ar",
+  matricula: "T° 118 F° 930 CPACF - T° 47 F° 59 CASI",
+  trayectoria: "20 años",
+  instagram: "https://www.instagram.com/estudiolacamera/",
   address: {
     full: "Martín y Omar 129, Piso 2, Of. 211, B1642DHC San Isidro, Provincia de Buenos Aires",
     short: "Martín y Omar 129, Piso 2, Of. 211, San Isidro",
@@ -99,6 +102,7 @@ export const siteData = {
     "Moreno",
   ],
   officialDefinition: "Estudio La Cámera es un estudio jurídico de San Isidro especializado exclusivamente en accidentes de tránsito en CABA y GBA Zona Norte.",
+  legalNotice: "La información de este sitio es orientativa y no reemplaza el asesoramiento legal sobre un caso concreto.",
   logo: {
     url: IMAGES.logo,
     externalUrl: IMAGES.logoFallback,
@@ -106,15 +110,15 @@ export const siteData = {
   },
   meta: {
     title: "Abogados de accidentes de tránsito en CABA y Gran Buenos Aires Zona Norte | Estudio La Cámera",
-    description: "Abogados de accidentes de tránsito en San Miguel, José C. Paz, CABA y San Isidro. Consulta sin cargo, honorarios a resultado y cheque a tu nombre.",
+    description: "Abogados de accidentes de tránsito en San Miguel, José C. Paz, CABA y San Isidro. Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta.",
     ogTitle: "Estudio La Cámera – Abogados de accidentes de tránsito en CABA y Gran Buenos Aires Zona Norte",
-    ogDescription: "¿Tuviste un accidente? Consulta sin cargo, honorarios a resultado y cheque a tu nombre. ★ 5,0 en Google.",
+    ogDescription: "¿Tuviste un accidente? Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta. ★ 5,0 en Google.",
     ogImage: "/images/og-estudio-la-camera.jpg",
   },
   hero: {
     eyebrow: "Abogados especialistas en accidentes de tránsito en CABA y GBA",
     title: "Tuviste un accidente. Nosotros nos ocupamos del reclamo.",
-    subtitle: "Te asesoramos sin cargo y te acompañamos desde el primer día hasta que cobrás. Cobramos solo si vos cobrás, y el cheque sale a tu nombre.",
+    subtitle: "Te asesoramos sin cargo y te acompañamos desde el primer día hasta que cobrás. Cobramos solo si vos cobrás, y la indemnización te llega por transferencia a tu cuenta bancaria.",
     zoneNotice: "Atendemos en CABA y GBA Zona Norte.",
   },
   trustBar: [
@@ -134,11 +138,18 @@ export const siteData = {
       subtitle: "Cobramos solo si vos cobrás",
     },
     {
-      icon: "check",
-      title: "Cheque a tu nombre",
-      subtitle: "La indemnización la cobrás vos, directamente",
+      icon: "bank",
+      title: "Cobrás directo en tu cuenta",
+      subtitle: "La indemnización te llega por transferencia bancaria, directamente a tu cuenta",
     },
   ],
+  howWeWorkSection: {
+    title: "Cómo trabajamos",
+    subtitle: "Un reclamo tiene pasos claros. Te explicamos cada uno para que sepas qué va a pasar en cada etapa.",
+    buttonText: "Hacé tu consulta sin cargo",
+    footnotePrefix: "Los plazos son orientativos. No nos comprometemos con fechas porque dependen de factores que no controla el estudio, como los tiempos de la aseguradora, de la mediación y de los juzgados.",
+    footnoteHighlight: "Lo que sí te aseguramos es que te mantenemos al tanto de cada avance.",
+  },
   howWeWork: [
     {
       step: 1,
@@ -151,22 +162,22 @@ export const siteData = {
       step: 2,
       icon: "folder",
       title: "Armamos tu caso",
-      timeframe: "2 a 4 semanas",
+      timeframe: "1 semana",
       text: "Reunimos la documentación, evaluamos tus lesiones con nuestro médico legista y los daños del vehículo con nuestros peritos y talleres.",
     },
     {
       step: 3,
-      icon: "people",
-      title: "Reclamo y negociación",
-      timeframe: "3 a 6 meses",
-      text: "Presentamos el reclamo a la aseguradora y negociamos por vos. Si hace falta, vamos a la mediación, que es obligatoria en Provincia de Buenos Aires y en CABA.",
+      icon: "users",
+      title: "Mediación y juicio",
+      timeframe: "4 semanas",
+      text: "Vamos a la mediación, que es obligatoria en Provincia de Buenos Aires y en CABA, y negociamos por vos con la aseguradora. Después de la mediación iniciamos el juicio, porque es la mejor forma de defender tu reclamo y obtener un mejor resultado.",
     },
     {
       step: 4,
-      icon: "money",
+      icon: "bank",
       title: "Cobrás",
-      timeframe: "Al cierre del acuerdo",
-      text: "Cuando se llega a un acuerdo, cobrás con un cheque a tu nombre. Si no hay acuerdo, iniciamos la demanda y seguimos a tu lado.",
+      timeframe: "Al cierre del acuerdo o la sentencia",
+      text: "Durante el juicio seguimos negociando por vos. Cuando se cierra un acuerdo o hay sentencia, cobrás con una transferencia a tu cuenta bancaria.",
     },
   ],
   cases: [
@@ -359,16 +370,16 @@ export const siteData = {
           id: "en-cuanto-tiempo-tengo-que-denunciar-el-accidente-al-seguro",
           question: "¿En cuánto tiempo tengo que denunciar el accidente al seguro?",
           paragraphs: [
-            "Tenés 3 días corridos desde el accidente para hacer la denuncia ante tu aseguradora, según la Ley de Seguros 17.418. Hacela aunque creas que no tuviste la culpa o que los daños son menores: si no denunciás a tiempo, la aseguradora puede poner trabas a la cobertura.",
-            "Si estuviste internado o no pudiste hacerla por una causa justificada, el plazo puede extenderse. Guardá el comprobante de la denuncia.",
+            "Tenés 3 días corridos desde el accidente para hacer la denuncia ante tu aseguradora, según la Ley de Seguros 17.418. Hacela aunque creas que no tuviste la culpa o que los daños son menores: si no denunciás a tiempo, la aseguradora puede poner trabas a la cobertura. Si estuviste internado o no pudiste hacerla por una causa justificada, el plazo puede extenderse.",
+            "Antes de presentarla, consultala con un abogado: lo que declares queda registrado y después es muy difícil corregirlo. Guardá el comprobante de la denuncia.",
           ],
         },
         {
           id: "tengo-que-hacer-la-denuncia-policial",
           question: "¿Tengo que hacer la denuncia policial?",
           paragraphs: [
-            "La denuncia policial es necesaria cuando en el accidente hubo personas lesionadas o fallecidas y la policía no la inició por su cuenta. Si solo hubo daños materiales, alcanza con la denuncia ante la aseguradora, aunque conviene dejar constancia escrita de todo lo que pasó.",
-            "La denuncia se hace en la comisaría de la zona donde ocurrió el accidente. Pedí una copia: es una prueba importante para el reclamo.",
+            "Depende del caso. La denuncia policial es necesaria cuando en el accidente hubo personas lesionadas o fallecidas y la policía no la inició por su cuenta. Si solo hubo daños materiales, suele alcanzar con la denuncia ante la aseguradora, aunque conviene dejar constancia escrita de todo lo que pasó.",
+            "Como no siempre conviene hacerla, primero hablalo con un abogado. Si corresponde, se hace en la comisaría de la zona donde ocurrió el accidente. Pedí una copia, porque es una prueba importante para el reclamo.",
           ],
         },
         {
@@ -383,8 +394,8 @@ export const siteData = {
           id: "que-documentacion-necesito-para-reclamar",
           question: "¿Qué documentación necesito para reclamar?",
           paragraphs: [
-            "Para reclamar por un accidente de tránsito necesitás tu DNI, el registro de conducir, la cédula del vehículo, la póliza del seguro, la denuncia del siniestro, fotos de los daños y el presupuesto de reparación. Si hubo lesiones, sumá los informes médicos y los datos de la denuncia policial.",
-            "Si te falta algo, no te preocupes: en la consulta sin cargo te decimos qué conseguir y te ayudamos a reunirlo.",
+            "Para reclamar por un accidente de tránsito conviene contar con tu DNI, el registro de conducir, la cédula del vehículo, la póliza del seguro, la denuncia del siniestro, fotos de los daños y el presupuesto de reparación. Si hubo lesiones, sumá los informes médicos y los datos de la denuncia policial.",
+            "No siempre hace falta tener todo. Si sos la víctima, podés reclamar aunque no tuvieras el registro o la documentación al día, porque esa falta es administrativa y no le quita responsabilidad a quien te chocó. Si te falta algo, en la consulta sin cargo te decimos qué conseguir y te ayudamos a reunirlo.",
           ],
         },
         {
@@ -449,7 +460,7 @@ export const siteData = {
           id: "cuanto-cobra-un-abogado-por-un-accidente-de-transito",
           question: "¿Cuánto cobra un abogado por un accidente de tránsito?",
           paragraphs: [
-            "En Estudio La Cámera trabajamos con honorarios a resultado: no pagás nada por adelantado y cobramos un porcentaje solo si vos cobrás la indemnización. Además, la consulta inicial es sin cargo y el cheque de la indemnización sale a tu nombre.",
+            "En Estudio La Cámera trabajamos con honorarios a resultado: no pagás nada por adelantado y cobramos un porcentaje solo si vos cobrás la indemnización. Además, la consulta inicial es sin cargo y la indemnización te llega por transferencia a tu cuenta bancaria.",
             "El porcentaje se acuerda por escrito desde el inicio, para que sepas exactamente cuánto vas a cobrar.",
           ],
         },
@@ -462,10 +473,10 @@ export const siteData = {
           ],
         },
         {
-          id: "por-que-el-cheque-sale-a-mi-nombre",
-          question: "¿Por qué el cheque sale a mi nombre?",
+          id: "como-cobro-la-indemnizacion",
+          question: "¿Cómo cobro la indemnización?",
           paragraphs: [
-            "En Estudio La Cámera el cheque de la indemnización sale a nombre del cliente, no del estudio. Así cobrás vos directamente, sabés exactamente cuánto te pagaron y tenés la tranquilidad de que el dinero llega a tus manos sin intermediarios.",
+            "En Estudio La Cámera la indemnización se cobra por transferencia bancaria a la cuenta del cliente, no a la del estudio. Así cobrás vos directamente, sabés exactamente cuánto te pagaron y tenés la tranquilidad de que el dinero llega a tu cuenta sin intermediarios.",
             "Los honorarios del estudio se pagan después, según lo acordado por escrito al inicio.",
           ],
         },
