@@ -117,9 +117,9 @@ export const siteData = {
   },
   hero: {
     eyebrow: "Abogados especialistas en accidentes de tránsito en CABA y GBA",
-    title: "Tuviste un accidente. Nosotros nos ocupamos del reclamo.",
+    title: "¿Tuviste un accidente? Nosotros nos ocupamos del reclamo.",
     subtitle: "Te asesoramos sin cargo y te acompañamos desde el primer día hasta que cobrás. Cobramos solo si vos cobrás, y la indemnización te llega por transferencia a tu cuenta bancaria.",
-    zoneNotice: "Atendemos en CABA y GBA Zona Norte.",
+    zoneNotice: "Atendemos en CABA y GBA.",
   },
   trustBar: [
     {
