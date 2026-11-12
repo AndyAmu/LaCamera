@@ -9,27 +9,17 @@ import Icons from "./Icons.astro";
   role="region"
   aria-label="Acciones rápidas de contacto"
 >
-  <div class="flex items-center gap-2 max-w-md mx-auto">
-    <!-- WhatsApp Button (50%) -->
+  <div class="max-w-md mx-auto">
+    <!-- WhatsApp Button (Full Width) -->
     <a
       href={siteData.whatsapp.url}
       target="_blank"
       rel="noopener noreferrer"
-      class="track-whatsapp flex-1 inline-flex items-center justify-center gap-2 py-3 px-2 rounded-xl font-bold text-sm text-white bg-whatsapp hover:bg-whatsapp-hover active:scale-[0.98] transition-all shadow-sm"
+      class="track-whatsapp w-full inline-flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl font-bold text-sm sm:text-base text-white bg-whatsapp hover:bg-whatsapp-hover active:scale-[0.98] transition-all shadow-sm"
       data-location="bottom-bar-mobile"
     >
       <Icons name="whatsapp" class="w-5 h-5 text-white flex-shrink-0" />
-      <span>WhatsApp</span>
-    </a>
-
-    <!-- Llamar Button (50%) -->
-    <a
-      href={siteData.phone.href}
-      class="track-call flex-1 inline-flex items-center justify-center gap-2 py-3 px-2 rounded-xl font-semibold text-sm text-navy-950 bg-cream-100 hover:bg-cream-200 active:scale-[0.98] border border-cream-300 transition-all shadow-sm"
-      data-location="bottom-bar-mobile"
-    >
-      <Icons name="phone" class="w-5 h-5 text-navy-800 flex-shrink-0" />
-      <span>Llamar</span>
+      <span>Escribinos por WhatsApp</span>
     </a>
   </div>
 </div>

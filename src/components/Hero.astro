@@ -51,21 +51,11 @@ import Icons from "./Icons.astro";
             href={siteData.whatsapp.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="track-whatsapp inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl font-bold text-base text-white bg-[#16A34A] hover:bg-[#15803D] active:scale-[0.99] transition-all shadow-md hover:shadow-lg"
+            class="track-whatsapp inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl font-bold text-base text-white bg-[#16A34A] hover:bg-[#15803D] active:scale-[0.99] transition-all shadow-md hover:shadow-lg w-full sm:w-auto"
             data-location="hero"
           >
             <Icons name="whatsapp" class="w-5 h-5 text-white" />
             <span>Escribinos por WhatsApp</span>
-          </a>
-
-          <!-- Botón secundario: Solo visible en celular (lg:hidden) -->
-          <a
-            href={siteData.phone.href}
-            class="track-call lg:hidden inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-base text-navy-900 bg-white hover:bg-cream-100 border border-slate-300 transition-all shadow-sm"
-            data-location="hero-mobile"
-          >
-            <Icons name="phone" class="w-5 h-5 text-navy-800" />
-            <span>Llamar ahora</span>
           </a>
         </div>
 
