@@ -5,7 +5,7 @@ import Icons from "./Icons.astro";
 
 <div
   id="mobile-bottom-bar"
-  class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 shadow-card transition-all duration-300 ease-in-out transform translate-y-0 opacity-100"
+  class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 shadow-card transition-all duration-300 ease-in-out transform translate-y-full opacity-0 pointer-events-none"
   role="region"
   aria-label="Acciones rápidas de contacto"
 >
@@ -29,16 +29,36 @@ import Icons from "./Icons.astro";
     const bar = document.getElementById("mobile-bottom-bar");
     if (!bar) return;
 
-    // Listen to form focus changes dispatched by ContactForm.astro
-    window.addEventListener("form-focus-change", ((e: CustomEvent) => {
-      const isFocused = e.detail?.focused;
-      if (isFocused) {
-        bar.classList.add("translate-y-full", "opacity-0", "pointer-events-none");
-        bar.classList.remove("translate-y-0", "opacity-100");
-      } else {
+    let isFormFocused = false;
+    let isContactVisible = false;
+    let isScrolledPast = false;
+
+    function updateBarVisibility() {
+      if (isScrolledPast && !isFormFocused && !isContactVisible) {
         bar.classList.remove("translate-y-full", "opacity-0", "pointer-events-none");
         bar.classList.add("translate-y-0", "opacity-100");
+      } else {
+        bar.classList.add("translate-y-full", "opacity-0", "pointer-events-none");
+        bar.classList.remove("translate-y-0", "opacity-100");
       }
+    }
+
+    // Scroll listener: solo mostrar al hacer scroll hacia abajo (superados los 180px)
+    function handleScroll() {
+      const scrolled = window.scrollY > 180;
+      if (scrolled !== isScrolledPast) {
+        isScrolledPast = scrolled;
+        updateBarVisibility();
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Chequeo inicial
+
+    // Listen to form focus changes dispatched by ContactForm.astro
+    window.addEventListener("form-focus-change", ((e: CustomEvent) => {
+      isFormFocused = !!e.detail?.focused;
+      updateBarVisibility();
     }) as EventListener);
 
     // Hide also when contact section is in viewport view to avoid overlapping
@@ -47,17 +67,11 @@ import Icons from "./Icons.astro";
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            // When user reaches deep into contact form on mobile
-            if (entry.isIntersecting && entry.intersectionRatio > 0.4) {
-              bar.classList.add("translate-y-full", "opacity-0", "pointer-events-none");
-              bar.classList.remove("translate-y-0", "opacity-100");
-            } else if (!entry.isIntersecting) {
-              bar.classList.remove("translate-y-full", "opacity-0", "pointer-events-none");
-              bar.classList.add("translate-y-0", "opacity-100");
-            }
+            isContactVisible = entry.isIntersecting && entry.intersectionRatio > 0.3;
+            updateBarVisibility();
           });
         },
-        { threshold: [0, 0.4, 0.8] }
+        { threshold: [0, 0.3, 0.8] }
       );
       observer.observe(contactSection);
     }
