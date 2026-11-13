@@ -93,7 +93,7 @@ export const siteData = {
   },
   zones: [
     "CABA",
-    "GBA Zona Norte",
+    "Gran Buenos Aires",
     "San Miguel",
     "José C. Paz",
     "San Isidro",
@@ -101,7 +101,7 @@ export const siteData = {
     "San Martín",
     "Moreno",
   ],
-  officialDefinition: "Estudio La Cámera es un estudio jurídico de San Isidro especializado exclusivamente en accidentes de tránsito en CABA y GBA Zona Norte.",
+  officialDefinition: "Estudio La Cámera es un estudio jurídico de San Isidro especializado exclusivamente en accidentes de tránsito en CABA y Gran Buenos Aires.",
   legalNotice: "La información de este sitio es orientativa y no reemplaza el asesoramiento legal sobre un caso concreto.",
   logo: {
     url: IMAGES.logo,
@@ -116,10 +116,10 @@ export const siteData = {
     ogImage: "/images/og-estudio-la-camera.jpg",
   },
   hero: {
-    eyebrow: "Abogados especialistas en accidentes de tránsito en CABA y GBA",
+    eyebrow: "Abogados especialistas en accidentes de tránsito en CABA y Gran Buenos Aires",
     title: "¿Tuviste un accidente? Nosotros nos ocupamos del reclamo.",
     subtitle: "Te asesoramos sin cargo y te acompañamos desde el primer día hasta que cobrás. Cobramos solo si vos cobrás, y la indemnización te llega por transferencia a tu cuenta bancaria.",
-    zoneNotice: "Atendemos en CABA y GBA.",
+    zoneNotice: "Atendemos en CABA y Gran Buenos Aires.",
   },
   trustBar: [
     {
@@ -415,7 +415,7 @@ export const siteData = {
           id: "que-tipos-de-accidentes-atienden",
           question: "¿Qué tipos de accidentes atienden?",
           paragraphs: [
-            "En Estudio La Cámera atendemos exclusivamente accidentes de tránsito: choques entre autos, peatones atropellados, accidentes en moto, bicicleta o monopatín, lesiones en colectivos, trenes, subte, taxis y autos de aplicación, reclamos a aseguradoras y reclamos a particulares sin seguro. Trabajamos en CABA y GBA Zona Norte: San Miguel, José C. Paz, San Isidro, Vicente López, San Martín y Moreno.",
+            "En Estudio La Cámera atendemos exclusivamente accidentes de tránsito: choques entre autos, peatones atropellados, accidentes en moto, bicicleta o monopatín, lesiones en colectivos, trenes, subte, taxis y autos de aplicación, reclamos a aseguradoras y reclamos a particulares sin seguro. Trabajamos en CABA y Gran Buenos Aires: San Miguel, José C. Paz, San Isidro, Vicente López, San Martín y Moreno.",
             "Si tu caso no entra en esta lista, consultanos igual: te decimos sin cargo si tenés reclamo.",
           ],
         },
@@ -484,7 +484,7 @@ export const siteData = {
           id: "donde-esta-el-estudio-y-en-que-zonas-atienden",
           question: "¿Dónde está el estudio y en qué zonas atienden?",
           paragraphs: [
-            "Estudio La Cámera está en Martín y Omar 129, Piso 2, Oficina 211, San Isidro, Provincia de Buenos Aires. Atendemos casos de accidentes de tránsito en CABA y GBA Zona Norte: San Miguel, José C. Paz, San Isidro, Vicente López, San Martín y Moreno. También podés hacer tu consulta por WhatsApp o por teléfono.",
+            "Estudio La Cámera está en Martín y Omar 129, Piso 2, Oficina 211, San Isidro, Provincia de Buenos Aires. Atendemos casos de accidentes de tránsito en CABA y Gran Buenos Aires: San Miguel, José C. Paz, San Isidro, Vicente López, San Martín y Moreno. También podés hacer tu consulta por WhatsApp o por teléfono.",
             "Atendemos de lunes a viernes de 8 a 16 h. Las reuniones en el estudio son con turno previo.",
           ],
         },
