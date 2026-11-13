@@ -36,7 +36,7 @@ export const IMAGES = {
 let dynamicReviews = {
   rating: "5,0",
   ratingValue: 5.0,
-  count: 293,
+  count: 296,
 };
 
 try {

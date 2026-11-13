@@ -70,8 +70,8 @@ const schemaGraph = isHome
           })),
           aggregateRating: {
             "@type": "AggregateRating",
-            ratingValue: "5.0",
-            reviewCount: "293",
+            ratingValue: siteData.reviews.ratingValue.toString(),
+            reviewCount: siteData.reviews.count.toString(),
             bestRating: "5",
             worstRating: "1",
           },

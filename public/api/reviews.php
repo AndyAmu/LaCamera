@@ -16,7 +16,7 @@ $cacheFile = __DIR__ . '/data/reviews-cache.json';
 // Valores de respaldo por defecto
 $defaultData = [
     'rating' => 5.0,
-    'count' => 293,
+    'count' => 296,
     'place_id' => getenv('GOOGLE_PLACES_ID') ?: 'ChIJW_IlRDSwv5URDx1I2MWnAbY',
     'last_updated' => time(),
     'last_check' => time(),
@@ -85,7 +85,7 @@ if (!empty($googleApiKey) && !empty($data['place_id'])) {
     }
 }
 
-$count = intval($data['count'] ?? 293);
+$count = intval($data['count'] ?? 296);
 $rating = number_format(floatval($data['rating'] ?? 5.0), 1, ',', '.');
 
 echo json_encode([
