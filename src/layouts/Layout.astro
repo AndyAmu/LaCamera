@@ -47,6 +47,10 @@ const schemaGraph = isHome
           email: siteData.email,
           hasMap: siteData.googleMapsUrl,
           sameAs: [siteData.instagram],
+          founder: {
+            "@type": "Person",
+            name: siteData.abogadoTitular,
+          },
           priceRange: "Honorarios a resultado",
           address: {
             "@type": "PostalAddress",

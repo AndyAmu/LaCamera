@@ -59,6 +59,7 @@ export const siteData = {
   name: "Estudio La Cámera",
   specialty: "Accidentes de tránsito",
   domain: "https://estudiolacamera.com.ar",
+  abogadoTitular: "Dr. Alejandro Agustín La Cámera",
   matricula: "T° 118 F° 930 CPACF - T° 47 F° 59 CASI",
   trayectoria: "20 años",
   instagram: "https://www.instagram.com/estudiolacamera/",
@@ -109,9 +110,9 @@ export const siteData = {
     alt: "Estudio La Cámera – Abogados especialistas en accidentes de tránsito",
   },
   meta: {
-    title: "Abogados de accidentes de tránsito en CABA y Gran Buenos Aires Zona Norte | Estudio La Cámera",
-    description: "Abogados de accidentes de tránsito en San Miguel, José C. Paz, CABA y San Isidro. Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta.",
-    ogTitle: "Estudio La Cámera – Abogados de accidentes de tránsito en CABA y Gran Buenos Aires Zona Norte",
+    title: "Abogados de accidentes de tránsito en CABA y Gran Buenos Aires | Estudio La Cámera",
+    description: "Abogados de accidentes de tránsito en CABA y todo Gran Buenos Aires. Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta.",
+    ogTitle: "Estudio La Cámera – Abogados de accidentes de tránsito en CABA y Gran Buenos Aires",
     ogDescription: "¿Tuviste un accidente? Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta. ★ 5,0 en Google.",
     ogImage: "/images/og-estudio-la-camera.jpg",
   },
@@ -280,15 +281,6 @@ export const siteData = {
       url: "https://maps.app.goo.gl/5dAosuXVSH7Qpp3a9",
     },
     {
-      id: "g-rev-7",
-      name: "Graciela Amarilla",
-      rating: 5,
-      date: "Hace 4 meses",
-      initials: "GA",
-      text: "Quiero agradecer al Dr Alejandro Lacamera por su profesionalismo, compromiso y acompañamiento durante todo el proceso judicial. Gracias a su dedicación y excelente trabajo, el juicio ha concluido favorablemente y ahora solo resta esperar la próxima fecha de cobro. Siempre se mostró atento, claro en sus explicaciones y dispuesto a responder cada consulta, brindando tranquilidad y confianza en cada etapa.",
-      url: "https://maps.app.goo.gl/at3Uih6rdXe8mEvj7",
-    },
-    {
       id: "g-rev-8",
       name: "Jose Luis Caza",
       rating: 5,
@@ -415,7 +407,7 @@ export const siteData = {
           id: "que-tipos-de-accidentes-atienden",
           question: "¿Qué tipos de accidentes atienden?",
           paragraphs: [
-            "En Estudio La Cámera atendemos exclusivamente accidentes de tránsito: choques entre autos, peatones atropellados, accidentes en moto, bicicleta o monopatín, lesiones en colectivos, trenes, subte, taxis y autos de aplicación, reclamos a aseguradoras y reclamos a particulares sin seguro. Trabajamos en CABA y Gran Buenos Aires: San Miguel, José C. Paz, San Isidro, Vicente López, San Martín y Moreno.",
+            "En Estudio La Cámera atendemos exclusivamente accidentes de tránsito: choques entre autos, peatones atropellados, accidentes en moto, bicicleta o monopatín, lesiones en colectivos, trenes, subte, taxis y autos de aplicación, reclamos a aseguradoras y reclamos a particulares sin seguro. Trabajamos en CABA y todo Gran Buenos Aires.",
             "Si tu caso no entra en esta lista, consultanos igual: te decimos sin cargo si tenés reclamo.",
           ],
         },
@@ -469,7 +461,6 @@ export const siteData = {
           question: "¿La consulta tiene costo?",
           paragraphs: [
             "No. En Estudio La Cámera la consulta es sin cargo y sin compromiso. Nos contás qué pasó por WhatsApp, por teléfono o en una reunión en el estudio con turno previo, analizamos tu caso y te decimos si tenés derecho a reclamar y cómo seguir. Recién después decidís si querés avanzar.",
-            "Si preferís conocernos en persona, te esperamos en el estudio, en San Isidro: el café corre por nuestra cuenta.",
           ],
         },
         {
@@ -484,7 +475,7 @@ export const siteData = {
           id: "donde-esta-el-estudio-y-en-que-zonas-atienden",
           question: "¿Dónde está el estudio y en qué zonas atienden?",
           paragraphs: [
-            "Estudio La Cámera está en Martín y Omar 129, Piso 2, Oficina 211, San Isidro, Provincia de Buenos Aires. Atendemos casos de accidentes de tránsito en CABA y Gran Buenos Aires: San Miguel, José C. Paz, San Isidro, Vicente López, San Martín y Moreno. También podés hacer tu consulta por WhatsApp o por teléfono.",
+            "Estudio La Cámera está en Martín y Omar 129, Piso 2, Oficina 211, San Isidro, Provincia de Buenos Aires. Atendemos casos de accidentes de tránsito en CABA y todo Gran Buenos Aires. También podés hacer tu consulta por WhatsApp o por teléfono.",
             "Atendemos de lunes a viernes de 8 a 16 h. Las reuniones en el estudio son con turno previo.",
           ],
         },
