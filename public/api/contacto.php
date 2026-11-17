@@ -108,8 +108,9 @@ if ($handle = @fopen($csvFile, 'a')) {
     fclose($handle);
 }
 
-// 5. Send notification email to the firm (info@estudiolacamera.com.ar)
-$toFirm = 'info@estudiolacamera.com.ar';
+// 5. Send notification email to the firm
+// Casillas del estudio: contacto@estudiolacamera.com.ar (configurada en Ferozo) e info@estudiolacamera.com.ar
+$toFirm = 'contacto@estudiolacamera.com.ar, info@estudiolacamera.com.ar';
 
 $isLesionados = (stripos($huboLesionados, 'sí') !== false || stripos($huboLesionados, 'si') !== false);
 if ($isLesionados) {
@@ -121,12 +122,12 @@ if ($isLesionados) {
 // Encode subject for UTF-8 compatibility
 $firmSubjectEncoded = '=?UTF-8?B?' . base64_encode($firmSubject) . '?=';
 
-$firmReplyTo = (!empty($email)) ? $email : 'info@estudiolacamera.com.ar';
+$firmReplyTo = (!empty($email)) ? $email : 'contacto@estudiolacamera.com.ar';
 
 $headersFirm = [
     'MIME-Version: 1.0',
     'Content-Type: text/html; charset=UTF-8',
-    'From: Estudio La Cámera <info@estudiolacamera.com.ar>',
+    'From: Estudio La Cámera <contacto@estudiolacamera.com.ar>',
     "Reply-To: {$firmReplyTo}",
     'X-Mailer: PHP/' . phpversion()
 ];
@@ -176,8 +177,8 @@ if (!empty($email)) {
     $headersUser = [
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
-        'From: Estudio La Cámera <info@estudiolacamera.com.ar>',
-        'Reply-To: info@estudiolacamera.com.ar',
+        'From: Estudio La Cámera <contacto@estudiolacamera.com.ar>',
+        'Reply-To: contacto@estudiolacamera.com.ar',
         'X-Mailer: PHP/' . phpversion()
     ];
 
