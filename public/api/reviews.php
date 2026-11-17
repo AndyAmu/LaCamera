@@ -49,38 +49,80 @@ if (isset($_GET['secret']) && $_GET['secret'] === $secretKey && isset($_GET['cou
 }
 
 // 3. Si se configuró una API Key oficial de Google Places en el entorno / hosting
-$googleApiKey = getenv('GOOGLE_PLACES_API_KEY');
+$googleApiKey = getenv('GOOGLE_PLACES_API_KEY') ?: 'AIzaSyA6PEj4vkBplVBgu7HgahGvt4iBhKUJ_5E';
 $cacheTtl = 43200; // 12 horas entre consultas a Google
 
 if (!empty($googleApiKey) && !empty($data['place_id'])) {
     $now = time();
     if (($now - intval($data['last_check'] ?? 0)) > $cacheTtl) {
         $data['last_check'] = $now;
-        
-        $placeUrl = "https://maps.googleapis.com/maps/api/place/details/json?place_id=" . urlencode($data['place_id']) . "&fields=rating,user_ratings_total&key=" . urlencode($googleApiKey);
+        $placeId = urlencode($data['place_id']);
+        $updated = false;
+
+        // 3.1. Intentar primero con Places API (New v1)
+        $placeNewEndpoint = "https://places.googleapis.com/v1/places/{$placeId}?fields=rating,userRatingCount,displayName";
         
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $placeUrl);
+        curl_setopt($ch, CURLOPT_URL, $placeNewEndpoint);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 6);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            "X-Goog-Api-Key: {$googleApiKey}",
+            "X-Goog-FieldMask: rating,userRatingCount,displayName"
+        ]);
         $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        if ($response) {
+        if ($httpCode === 200 && $response) {
             $googleData = json_decode($response, true);
-            if (isset($googleData['status']) && $googleData['status'] === 'OK' && isset($googleData['result'])) {
-                $result = $googleData['result'];
-                if (isset($result['user_ratings_total']) && intval($result['user_ratings_total']) > 0) {
-                    $data['count'] = intval($result['user_ratings_total']);
-                }
-                if (isset($result['rating']) && floatval($result['rating']) > 0) {
-                    $data['rating'] = floatval($result['rating']);
-                }
-                $data['last_updated'] = $now;
+            if (isset($googleData['userRatingCount']) && intval($googleData['userRatingCount']) > 0) {
+                $data['count'] = intval($googleData['userRatingCount']);
+                $updated = true;
+            }
+            if (isset($googleData['rating']) && floatval($googleData['rating']) > 0) {
+                $data['rating'] = floatval($googleData['rating']);
+                $updated = true;
             }
         }
-        
+
+        // 3.2. Fallback a endpoint legacy en caso de ser necesario
+        if (!$updated) {
+            $placeLegacyUrl = "https://maps.googleapis.com/maps/api/place/details/json?place_id={$placeId}&fields=rating,user_ratings_total&key=" . urlencode($googleApiKey);
+            
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $placeLegacyUrl);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 6);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+            $responseLegacy = curl_exec($ch);
+            curl_close($ch);
+
+            if ($responseLegacy) {
+                $googleDataLegacy = json_decode($responseLegacy, true);
+                if (isset($googleDataLegacy['status']) && $googleDataLegacy['status'] === 'OK' && isset($googleDataLegacy['result'])) {
+                    $result = $googleDataLegacy['result'];
+                    if (isset($result['user_ratings_total']) && intval($result['user_ratings_total']) > 0) {
+                        $data['count'] = intval($result['user_ratings_total']);
+                        $updated = true;
+                    }
+                    if (isset($result['rating']) && floatval($result['rating']) > 0) {
+                        $data['rating'] = floatval($result['rating']);
+                        $updated = true;
+                    }
+                }
+            }
+        }
+
+        if ($updated) {
+            $data['last_updated'] = $now;
+        }
+
+        $dataDir = __DIR__ . '/data';
+        if (!is_dir($dataDir)) {
+            @mkdir($dataDir, 0755, true);
+        }
         @file_put_contents($cacheFile, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     }
 }
