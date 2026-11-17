@@ -22,14 +22,16 @@ export interface FaqCategory {
   items: FaqItem[];
 }
 
+const base = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
+
 export const IMAGES = {
-  logo: "/images/logo-light.png",
+  logo: `${base}/images/logo-light.png`,
   logoFallback: "https://estudiolacamera.com.ar/gui/img/logo-light.png",
-  hero: "/images/hero-abogado-consulta.webp",
+  hero: `${base}/images/hero-abogado-consulta.webp`,
   heroFallback: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=80",
-  coffee: "/images/cafe-estudio.webp",
-  coffeeFallback: "/images/taza-de-cafe.jpg",
-  ogImage: "/images/og-estudio-la-camera.jpg",
+  coffee: `${base}/images/cafe-estudio.webp`,
+  coffeeFallback: `${base}/images/taza-de-cafe.jpg`,
+  ogImage: "/images/og-estudio-la-camera.jpg?v=2",
 };
 
 // Leer dinámicamente datos de reseñas desde el archivo de caché
@@ -114,7 +116,7 @@ export const siteData = {
     description: "Abogados de accidentes de tránsito en CABA y todo Gran Buenos Aires. Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta.",
     ogTitle: "Estudio La Cámera – Abogados de accidentes de tránsito en CABA y Gran Buenos Aires",
     ogDescription: "¿Tuviste un accidente? Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta. ★ 5,0 en Google.",
-    ogImage: "/images/og-estudio-la-camera.jpg",
+    ogImage: "/images/og-estudio-la-camera.jpg?v=2",
   },
   hero: {
     eyebrow: "Abogados especialistas en accidentes de tránsito en CABA y Gran Buenos Aires",
