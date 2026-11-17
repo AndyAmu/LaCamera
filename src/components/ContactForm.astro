@@ -400,8 +400,10 @@ const formId = `form-${formOrigin}`;
           }
         });
 
+        const basePath = window.location.pathname.startsWith("/demo") ? "/demo" : "";
+
         try {
-          const res = await fetch("/api/contacto.php", {
+          const res = await fetch(`${basePath}/api/contacto.php`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -439,7 +441,7 @@ const formId = `form-${formOrigin}`;
             }
 
             // Redirect to Gracias page
-            const redirectUrl = new URL("/gracias", window.location.origin);
+            const redirectUrl = new URL(`${basePath}/gracias`, window.location.origin);
             redirectUrl.searchParams.set("nombre", nombreVal);
             redirectUrl.searchParams.set("telefono", telVal);
             window.location.href = redirectUrl.toString();

@@ -197,9 +197,10 @@ const schemaGraph = isHome
 
         // 2. Determinar endpoint (en localhost consulta directamente al JSON para evitar problemas de PHP en Node)
         var isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+        var basePath = window.location.pathname.startsWith("/demo") ? "/demo" : "";
         var endpoint = isLocal
-          ? "/api/data/reviews-cache.json?_t=" + Date.now()
-          : "/api/reviews.php?_t=" + Date.now();
+          ? basePath + "/api/data/reviews-cache.json?_t=" + Date.now()
+          : basePath + "/api/reviews.php?_t=" + Date.now();
 
         fetch(endpoint)
           .then(function(res) {
@@ -220,7 +221,7 @@ const schemaGraph = isHome
           .catch(function() {
             // Si /api/reviews.php falla en producción, intentar leer reviews-cache.json
             if (!isLocal) {
-              fetch("/api/data/reviews-cache.json?_t=" + Date.now())
+              fetch(basePath + "/api/data/reviews-cache.json?_t=" + Date.now())
                 .then(function(r) { return r.json(); })
                 .then(function(data) {
                   if (data && data.count) {
