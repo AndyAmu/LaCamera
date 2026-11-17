@@ -31,7 +31,7 @@ export const IMAGES = {
   heroFallback: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=80",
   coffee: `${base}/images/cafe-estudio.webp`,
   coffeeFallback: `${base}/images/taza-de-cafe.jpg`,
-  ogImage: "/images/og-estudio-la-camera.jpg?v=2",
+  ogImage: "/images/og-estudio-la-camera.jpg?v=3",
 };
 
 // Leer dinámicamente datos de reseñas desde el archivo de caché
@@ -116,7 +116,7 @@ export const siteData = {
     description: "Abogados de accidentes de tránsito en CABA y todo Gran Buenos Aires. Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta.",
     ogTitle: "Estudio La Cámera – Abogados de accidentes de tránsito en CABA y Gran Buenos Aires",
     ogDescription: "¿Tuviste un accidente? Consulta sin cargo, honorarios a resultado y cobro por transferencia a tu cuenta. ★ 5,0 en Google.",
-    ogImage: "/images/og-estudio-la-camera.jpg?v=2",
+    ogImage: "/images/og-estudio-la-camera.jpg?v=3",
   },
   hero: {
     eyebrow: "Abogados especialistas en accidentes de tránsito en CABA y Gran Buenos Aires",
