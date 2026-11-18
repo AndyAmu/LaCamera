@@ -16,8 +16,14 @@ pnpm-debug.log*
 # local invoices/billing
 Facturas/
 *.pdf
+*.zip
+Backup Ferozo/
 
+# secrets & local server configs
+public/api/config.php
+dist/api/config.php
 .env
+.env.*
 .env.production
 
 # macOS-specific files

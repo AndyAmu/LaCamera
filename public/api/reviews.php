@@ -48,8 +48,11 @@ if (isset($_GET['secret']) && $_GET['secret'] === $secretKey && isset($_GET['cou
     }
 }
 
-// 3. Si se configuró una API Key oficial de Google Places en el entorno / hosting
-$googleApiKey = getenv('GOOGLE_PLACES_API_KEY') ?: 'AIzaSyA6PEj4vkBplVBgu7HgahGvt4iBhKUJ_5E';
+// 3. Cargar clave de API de Google Places
+// Prioridad: 1) variable de entorno, 2) archivo de configuración local config.php (ignorado por git)
+$configFile = __DIR__ . '/config.php';
+$localConfig = file_exists($configFile) ? @include($configFile) : [];
+$googleApiKey = getenv('GOOGLE_PLACES_API_KEY') ?: (is_array($localConfig) && isset($localConfig['GOOGLE_PLACES_API_KEY']) ? $localConfig['GOOGLE_PLACES_API_KEY'] : '');
 $cacheTtl = 43200; // 12 horas entre consultas a Google
 
 if (!empty($googleApiKey) && !empty($data['place_id'])) {
